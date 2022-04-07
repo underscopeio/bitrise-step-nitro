@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+# shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] ; then
     set -x
 fi
@@ -15,15 +16,27 @@ LINUX_BIN_FILE="uci-linux"
 BIN_FILE=$([[ "$(uname)" == "Darwin" ]] && echo "$MACOS_BIN_FILE" || echo "$LINUX_BIN_FILE")
 BIN_FILE_PATH="$SCRIPT_DIR/$BIN_FILE"
 
+# Download cli release
 wget -q "https://github.com/underscopeio/bitrise-step-uci-builder/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
 chmod +x "$BIN_FILE_PATH"
 
+# Obtain vm boot time 
+ps_command=$([[ "$(uname)" == "Darwin" ]] && echo "ps -eo lstart,command" || echo "ps -eo lstart,cmd")
+date_command=$([[ "$(uname)" == "Darwin" ]] && echo "gdate" || echo "date")
+
+bitrise_process_started_at=$($ps_command | grep "bitrise run" | grep -v grep | sed -e 's/^\(.\{24\}\).*/\1/' | head -1)
+bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=$(date)}" "+%s%3N")
+
+envman add --key "UCI_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
+
+# Build command arguments
 args=("build" "$platform" "$BITRISE_SOURCE_DIR")
 
 # Global args
 if [[ ${debug} == "yes" ]] ; then
     args+=("--verbose")
 fi
+# shellcheck disable=SC2154
 if [[ ${disable_cache} == "yes" ]] ; then
     args+=("--disable-cache")
 fi
@@ -54,6 +67,7 @@ fi
 if [[ -n ${app_envfile_path} ]] ; then
     args+=("--app-envfile-path=""${app_envfile_path}""")
 fi
+# shellcheck disable=SC2154
 if [[ ${exclude_modified_files} == "yes" ]] ; then
     args+=("--exclude-modified-files")
 fi
