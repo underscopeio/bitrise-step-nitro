@@ -38,6 +38,7 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `tracking_provider` | Where the build output will be displayed: `console`: Console standard output.  `uci`: Undercope CI services. |  | `uci-on-premise` |
 | `app_envfile_path` | Where an envfile for certain environment is located. |  |  |
 | `exclude-modified-files` | If you modify or delete files right after cloning your repository those changes won't impact on your build. |  | `no` |
+| `env-var-lookup-keys` | A list of env variable keys to lookup in order to determine whether the build should be cached or not. |  |  |
 | `android_flavor` | Flavor |  |  |
 | `android_app_identifier` | App identifier |  |  |
 | `android_keystore_url` | Keystore url |  | `$BITRISEIO_ANDROID_KEYSTORE_URL` |

@@ -137,7 +137,7 @@ inputs:
       summary: "Where an envfile for certain environment is located."
       description: "Where an envfile for certain environment is located."
       is_expand: true
-  - exclude-modified-files: "no"
+  - exclude_modified_files: "no"
     opts:
       title: "Exclude modified files"
       summary: "If you modify or delete files right after cloning your repository those changes won't impact on your build."
@@ -146,6 +146,12 @@ inputs:
       value_options:
         - "yes"
         - "no"
+  - env_var_lookup_keys:
+    opts:
+      title: "List of env var keys to lookup"
+      summary: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
+      description: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
+      is_expand: true
 
   # Android Category
   - android_flavor:

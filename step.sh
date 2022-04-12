@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-STEP_VERSION=0.0.2-alpha.1
+STEP_VERSION=0.0.2-alpha.2
 
 MACOS_BIN_FILE="uci-macos"
 LINUX_BIN_FILE="uci-linux"
@@ -70,6 +70,9 @@ fi
 # shellcheck disable=SC2154
 if [[ ${exclude_modified_files} == "yes" ]] ; then
     args+=("--exclude-modified-files")
+fi
+if [[ -n ${env_var_lookup_keys} ]] ; then
+    args+=("--env-var-lookup-keys=""${env_var_lookup_keys}""")
 fi
 
 # IOS args
