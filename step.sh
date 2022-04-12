@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-STEP_VERSION=0.0.2-alpha.1
+STEP_VERSION=0.0.2-alpha.2
 
 MACOS_BIN_FILE="uci-macos"
 LINUX_BIN_FILE="uci-linux"
@@ -30,7 +30,7 @@ bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=
 envman add --key "UCI_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 # Build command arguments
-args=("build" "$platform" "$BITRISE_SOURCE_DIR")
+args=("build" "$platform" "$BITRISE_SOURCE_DIR" "--tracking-provider=uci-on-premise")
 
 # Global args
 if [[ ${debug} == "yes" ]] ; then
@@ -58,18 +58,15 @@ fi
 if [[ -n ${cache_provider} ]] ; then
     args+=("--cache-provider=""${cache_provider}""")
 fi
-if [[ -n ${log_provider} ]] ; then
-    args+=("--log-provider=""${log_provider}""")
-fi
-if [[ -n ${tracking_provider} ]] ; then
-    args+=("--tracking-provider=""${tracking_provider}""")
-fi
 if [[ -n ${app_envfile_path} ]] ; then
     args+=("--app-envfile-path=""${app_envfile_path}""")
 fi
 # shellcheck disable=SC2154
 if [[ ${exclude_modified_files} == "yes" ]] ; then
     args+=("--exclude-modified-files")
+fi
+if [[ -n ${env_var_lookup_keys} ]] ; then
+    args+=("--env-var-lookup-keys=""${env_var_lookup_keys}""")
 fi
 
 # IOS args
