@@ -104,33 +104,6 @@ inputs:
       value_options:
         - "s3"
         - "azure"
-  - log_provider:
-    opts:
-      title: "Log provider"
-      summary: "Choose the provider where logs will be persisted."
-      description: |-
-        Choose the provider where logs will be persisted:
-        - `s3`: Amazon - Simple Storage Service.
-        - `azure`: Microsoft - Azure Blob Storage.
-      is_expand: true
-      value_options:
-        - "fs"
-        - "s3"
-        - "azure"
-  - tracking_provider: "uci-on-premise"
-    opts:
-      title: "Tracking provider"
-      summary: "Where the build output will be displayed."
-      description: |-
-        Where the build output will be displayed:
-        `console`: Console standard output.
-
-        `uci`: Undercope CI services.
-      is_expand: true
-      value_options:
-        - "console"
-        - "uci"
-        - "uci-on-premise"
   - app_envfile_path:
     opts:
       title: "Full path to a .envfile"
@@ -151,7 +124,7 @@ inputs:
       title: "List of env var keys to lookup"
       summary: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
       description: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
-      is_expand: true
+      is_expand: false
 
   # Android Category
   - android_flavor:
