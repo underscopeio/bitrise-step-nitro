@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-STEP_VERSION=0.0.2-alpha.2
+STEP_VERSION=0.0.2-alpha.3
 
 MACOS_BIN_FILE="uci-macos"
 LINUX_BIN_FILE="uci-linux"
