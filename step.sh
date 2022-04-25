@@ -58,9 +58,6 @@ fi
 if [[ -n ${cache_provider} ]] ; then
     args+=("--cache-provider=""${cache_provider}""")
 fi
-if [[ -n ${app_envfile_path} ]] ; then
-    args+=("--app-envfile-path=""${app_envfile_path}""")
-fi
 # shellcheck disable=SC2154
 if [[ ${exclude_modified_files} == "yes" ]] ; then
     args+=("--exclude-modified-files")

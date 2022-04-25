@@ -104,12 +104,6 @@ inputs:
       value_options:
         - "s3"
         - "azure"
-  - app_envfile_path:
-    opts:
-      title: "Full path to a .envfile"
-      summary: "Where an envfile for certain environment is located."
-      description: "Where an envfile for certain environment is located."
-      is_expand: true
   - exclude_modified_files: "no"
     opts:
       title: "Exclude modified files"
