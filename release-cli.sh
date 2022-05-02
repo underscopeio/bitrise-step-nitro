@@ -24,8 +24,8 @@ RELEASE_NAME=$2
 REPO_URL="git@github.com:underscopeio/underscope-ci.git"
 REPO_PATH=$(mktemp -d -t)
 BUILDER_PATH="$REPO_PATH/packages/builder"
-MACOS_FILENAME="uci-macos"
-LINUX_FILENAME="uci-linux"
+MACOS_FILENAME="nitro-macos"
+LINUX_FILENAME="nitro-linux"
 
 git clone "$REPO_URL" --depth=1 --branch="$BRANCH" --single-branch "${REPO_PATH}"
 

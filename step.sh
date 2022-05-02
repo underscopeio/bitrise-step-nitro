@@ -10,11 +10,11 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 STEP_VERSION=0.0.2-alpha.3
 
-MACOS_BIN_FILE="uci-macos"
-LINUX_BIN_FILE="uci-linux"
+MACOS_BIN_FILE="nitro-macos"
+LINUX_BIN_FILE="nitro-linux"
 
 BIN_FILE=$([[ "$(uname)" == "Darwin" ]] && echo "$MACOS_BIN_FILE" || echo "$LINUX_BIN_FILE")
-BIN_FILE_PATH="$SCRIPT_DIR/$BIN_FILE"
+BIN_FILE_PATH="$SCRIPT_DIR/nitro"
 
 # Download cli release
 wget -q "https://github.com/underscopeio/bitrise-step-uci-builder/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
@@ -30,7 +30,7 @@ bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=
 envman add --key "UCI_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 # Build command arguments
-args=("build" "$platform" "$BITRISE_SOURCE_DIR" "--tracking-provider=uci-on-premise")
+args=("$platform" "$BITRISE_SOURCE_DIR" "--tracking-provider=uci-on-premise")
 
 # Global args
 if [[ ${debug} == "yes" ]] ; then
