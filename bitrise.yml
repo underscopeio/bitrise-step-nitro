@@ -4,7 +4,7 @@ project_type: ""
 app:
   envs:
     - BITRISE_STEP_ID: uci-builder
-    - BITRISE_STEP_VERSION: 0.0.3
+    - BITRISE_STEP_VERSION: 0.0.4-alpha.1
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/underscopeio/bitrise-step-uci-builder.git
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
     - BITRISE_APP_URL: "app.bitrise.io/APP-SLUG/"

@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-STEP_VERSION=0.0.3
+STEP_VERSION=0.0.4-alpha.1
 
 MACOS_BIN_FILE="nitro-macos"
 LINUX_BIN_FILE="nitro-linux"
