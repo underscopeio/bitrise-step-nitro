@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-STEP_VERSION=0.0.4-alpha.1
+STEP_VERSION=0.0.4-alpha.2
 
 MACOS_BIN_FILE="nitro-macos"
 LINUX_BIN_FILE="nitro-linux"
@@ -30,7 +30,9 @@ bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=
 envman add --key "UCI_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 # Build command arguments
-args=("$platform" "$BITRISE_SOURCE_DIR" "--tracking-provider=uci-on-premise")
+args=("$platform")
+args+=("--repo-path=""${BITRISE_SOURCE_DIR}""")
+args+=("--tracking-provider=uci-on-premise")
 
 # Global args
 if [[ ${debug} == "yes" ]] ; then
