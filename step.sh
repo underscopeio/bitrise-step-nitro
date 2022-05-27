@@ -1,15 +1,14 @@
 #!/bin/bash
 set -e
 
-STEP_VERSION=0.0.4-alpha.4
+STEP_VERSION=0.0.4-alpha.5
 
 # shellcheck disable=SC2154
-if [[ ${debug} == "yes" ]] ; then
+if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
     set -x
 fi
 
-# Global args
-
+# Binary initialization
 if [[ -n ${nitro_bin_file_path} ]] ; then
     BIN_FILE_PATH="$nitro_bin_file_path"
 else
@@ -41,11 +40,11 @@ args+=("--repo-path=""${BITRISE_SOURCE_DIR}""")
 args+=("--tracking-provider=uci-on-premise")
 
 # Global args
-if [[ ${debug} == "yes" ]] ; then
+if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
     args+=("--verbose")
 fi
 # shellcheck disable=SC2154
-if [[ ${disable_cache} == "yes" ]] ; then
+if [[ ${disable_cache} == "yes" ]] || [[ ${disable_cache} == "true" ]] ; then
     args+=("--disable-cache")
 fi
 if [[ -n ${build_id} ]] ; then
@@ -67,7 +66,7 @@ if [[ -n ${cache_provider} ]] ; then
     args+=("--cache-provider=""${cache_provider}""")
 fi
 # shellcheck disable=SC2154
-if [[ ${exclude_modified_files} == "yes" ]] ; then
+if [[ ${exclude_modified_files} == "yes" ]] || [[ ${exclude_modified_files} == "true" ]]; then
     args+=("--exclude-modified-files")
 fi
 if [[ -n ${env_var_lookup_keys} ]] ; then
@@ -75,52 +74,52 @@ if [[ -n ${env_var_lookup_keys} ]] ; then
 fi
 
 # IOS args
-if [[ -n ${ios_certificate_url} ]] ; then
+if [[ -n ${ios_certificate_url} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-certificate-url=""$ios_certificate_url""")
 fi
-if [[ -n ${ios_certificate_passphrase} ]] ; then
+if [[ -n ${ios_certificate_passphrase} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-certificate-passphrase=""$ios_certificate_passphrase""")
 fi
-if [[ -n ${ios_provisioning_profile_urls} ]] ; then
+if [[ -n ${ios_provisioning_profile_urls} ]] && [[ "${platform}" == "ios" ]] ; then
     # replace | for spaces
     urls="$( echo "${ios_provisioning_profile_urls}" | sed 's/|/ /;s// /' )"
     args+=("--ios-provisioning-profile-urls=""$urls""")
 fi
-if [[ -n ${ios_provisioning_profile_url_map} ]] ; then
+if [[ -n ${ios_provisioning_profile_url_map} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-provisioning-profile-url-map=""$ios_provisioning_profile_url_map""")
 fi
-if [[ -n ${ios_provisioning_profile_specifier} ]] ; then
+if [[ -n ${ios_provisioning_profile_specifier} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-provisioning-profile-specifier=""$ios_provisioning_profile_specifier""")
 fi
-if [[ -n ${ios_xcconfig_path} ]] ; then
+if [[ -n ${ios_xcconfig_path} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-xcconfig-path=""${ios_xcconfig_path}""")
 fi
-if [[ -n ${ios_team_id} ]] ; then
+if [[ -n ${ios_team_id} ]] && [[ "${platform}" == "ios" ]] ; then
     args+=("--ios-team-id=""$ios_team_id""")
 fi
 
 # Android args
-if [[ -n ${android_flavor} ]] ; then
+if [[ -n ${android_flavor} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-flavor=""$android_flavor""")
 fi
-if [[ -n ${android_app_identifier} ]] ; then
+if [[ -n ${android_app_identifier} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-app-identifier=""$android_app_identifier""")
 fi
-if [[ -n ${android_keystore_url} ]] ; then
+if [[ -n ${android_keystore_url} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-keystore-url=""$android_keystore_url""")
 fi
-if [[ -n ${android_keystore_password} ]] ; then
+if [[ -n ${android_keystore_password} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-keystore-password=""$android_keystore_password""")
 fi
-if [[ -n ${android_keystore_key_alias} ]] ; then
+if [[ -n ${android_keystore_key_alias} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-keystore-key-alias=""$android_keystore_key_alias""")
 fi
-if [[ -n ${android_keystore_key_password} ]] ; then
+if [[ -n ${android_keystore_key_password} ]] && [[ "${platform}" == "android" ]] ; then
     args+=("--android-keystore-key-password=""$android_keystore_key_password""")
 fi
 
 # AWS Storage
-if [[ -n ${aws_s3_access_key_id} ]] ; then
+if [[ -n ${aws_s3_access_key_id} ]]  ; then
     args+=("--aws-s3-access-key-id=""$aws_s3_access_key_id""")
 fi
 if [[ -n ${aws_s3_secret_access_key} ]] ; then
