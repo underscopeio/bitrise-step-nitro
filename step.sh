@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-STEP_VERSION=0.0.4-alpha.5
+STEP_VERSION=0.0.4-alpha.6
 
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
@@ -74,50 +74,53 @@ if [[ -n ${env_var_lookup_keys} ]] ; then
 fi
 
 # IOS args
-if [[ -n ${ios_certificate_url} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-certificate-url=""$ios_certificate_url""")
-fi
-if [[ -n ${ios_certificate_passphrase} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-certificate-passphrase=""$ios_certificate_passphrase""")
-fi
-if [[ -n ${ios_provisioning_profile_urls} ]] && [[ "${platform}" == "ios" ]] ; then
-    # replace | for spaces
-    urls="$( echo "${ios_provisioning_profile_urls}" | sed 's/|/ /;s// /' )"
-    args+=("--ios-provisioning-profile-urls=""$urls""")
-fi
-if [[ -n ${ios_provisioning_profile_url_map} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-provisioning-profile-url-map=""$ios_provisioning_profile_url_map""")
-fi
-if [[ -n ${ios_provisioning_profile_specifier} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-provisioning-profile-specifier=""$ios_provisioning_profile_specifier""")
-fi
-if [[ -n ${ios_xcconfig_path} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-xcconfig-path=""${ios_xcconfig_path}""")
-fi
-if [[ -n ${ios_team_id} ]] && [[ "${platform}" == "ios" ]] ; then
-    args+=("--ios-team-id=""$ios_team_id""")
+if [[ "${platform}" == "ios" ]] ; then
+    if [[ -n ${ios_certificate_url} ]] ; then
+        args+=("--ios-certificate-url=""$ios_certificate_url""")
+    fi
+    if [[ -n ${ios_certificate_passphrase} ]] ; then
+        args+=("--ios-certificate-passphrase=""$ios_certificate_passphrase""")
+    fi
+    if [[ -n ${ios_provisioning_profile_urls} ]] ; then
+        # replace | for spaces
+        urls="$( echo "${ios_provisioning_profile_urls}" | sed 's/|/ /;s// /' )"
+        args+=("--ios-provisioning-profile-urls=""$urls""")
+    fi
+    if [[ -n ${ios_provisioning_profile_url_map} ]] ; then
+        args+=("--ios-provisioning-profile-url-map=""$ios_provisioning_profile_url_map""")
+    fi
+    if [[ -n ${ios_provisioning_profile_specifier} ]] ; then
+        args+=("--ios-provisioning-profile-specifier=""$ios_provisioning_profile_specifier""")
+    fi
+    if [[ -n ${ios_xcconfig_path} ]] ; then
+        args+=("--ios-xcconfig-path=""${ios_xcconfig_path}""")
+    fi
+    if [[ -n ${ios_team_id} ]] ; then
+        args+=("--ios-team-id=""$ios_team_id""")
+    fi
 fi
 
 # Android args
-if [[ -n ${android_flavor} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-flavor=""$android_flavor""")
+if [[ "${platform}" == "android" ]] ; then
+    if [[ -n ${android_flavor} ]] ; then
+        args+=("--android-flavor=""$android_flavor""")
+    fi
+    if [[ -n ${android_app_identifier} ]] ; then
+        args+=("--android-app-identifier=""$android_app_identifier""")
+    fi
+    if [[ -n ${android_keystore_url} ]] ; then
+        args+=("--android-keystore-url=""$android_keystore_url""")
+    fi
+    if [[ -n ${android_keystore_password} ]] ; then
+        args+=("--android-keystore-password=""$android_keystore_password""")
+    fi
+    if [[ -n ${android_keystore_key_alias} ]] ; then
+        args+=("--android-keystore-key-alias=""$android_keystore_key_alias""")
+    fi
+    if [[ -n ${android_keystore_key_password} ]] ; then
+        args+=("--android-keystore-key-password=""$android_keystore_key_password""")
+    fi
 fi
-if [[ -n ${android_app_identifier} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-app-identifier=""$android_app_identifier""")
-fi
-if [[ -n ${android_keystore_url} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-keystore-url=""$android_keystore_url""")
-fi
-if [[ -n ${android_keystore_password} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-keystore-password=""$android_keystore_password""")
-fi
-if [[ -n ${android_keystore_key_alias} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-keystore-key-alias=""$android_keystore_key_alias""")
-fi
-if [[ -n ${android_keystore_key_password} ]] && [[ "${platform}" == "android" ]] ; then
-    args+=("--android-keystore-key-password=""$android_keystore_key_password""")
-fi
-
 # AWS Storage
 if [[ -n ${aws_s3_access_key_id} ]]  ; then
     args+=("--aws-s3-access-key-id=""$aws_s3_access_key_id""")
