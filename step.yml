@@ -237,7 +237,7 @@ inputs:
       is_expand: true
 
   # Nitro Category
-  - nitro_bin_file_path: "$UCI_AWS_S3_BUCKET"
+  - nitro_bin_file_path:
     opts:
       category: "Nitro"
       title: "Nitro binary location"
