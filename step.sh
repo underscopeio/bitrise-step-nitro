@@ -1,24 +1,30 @@
 #!/bin/bash
 set -e
 
+STEP_VERSION=0.0.4-alpha.4
+
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] ; then
     set -x
 fi
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Global args
 
-STEP_VERSION=0.0.4-alpha.3
+if [[ -n ${nitro_bin_file_path} ]] ; then
+    BIN_FILE_PATH="$nitro_bin_file_path"
+else
+    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-MACOS_BIN_FILE="nitro-macos"
-LINUX_BIN_FILE="nitro-linux"
+    MACOS_BIN_FILE="nitro-macos"
+    LINUX_BIN_FILE="nitro-linux"
 
-BIN_FILE=$([[ "$(uname)" == "Darwin" ]] && echo "$MACOS_BIN_FILE" || echo "$LINUX_BIN_FILE")
-BIN_FILE_PATH="$SCRIPT_DIR/nitro"
+    BIN_FILE=$([[ "$(uname)" == "Darwin" ]] && echo "$MACOS_BIN_FILE" || echo "$LINUX_BIN_FILE")
+    BIN_FILE_PATH="$SCRIPT_DIR/nitro"
 
-# Download cli release
-wget -q "https://github.com/underscopeio/bitrise-step-uci-builder/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
-chmod +x "$BIN_FILE_PATH"
+    # Download cli release
+    wget -q "https://github.com/underscopeio/bitrise-step-uci-builder/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
+    chmod +x "$BIN_FILE_PATH"
+fi
 
 # Obtain vm boot time 
 ps_command=$([[ "$(uname)" == "Darwin" ]] && echo "ps -eo lstart,command" || echo "ps -eo lstart,cmd")

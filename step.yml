@@ -235,6 +235,15 @@ inputs:
       title: "Bucket"
       summary: "Bucket name"
       is_expand: true
+
+  # Nitro Category
+  - nitro_bin_file_path: "$UCI_AWS_S3_BUCKET"
+    opts:
+      category: "Nitro"
+      title: "Nitro binary location"
+      summary: "Nitro binary location (by default it downloads the binary matching with the step version)"
+      is_expand: true
+
 outputs:
   - UCI_LOGS_PATH:
     opts:
