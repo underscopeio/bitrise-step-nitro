@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-STEP_VERSION=0.0.4-alpha.7
+STEP_VERSION=0.0.4
 
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
