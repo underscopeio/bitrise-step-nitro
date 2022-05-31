@@ -3,7 +3,7 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ""
 app:
   envs:
-    - BITRISE_STEP_ID: uci-builder
+    - BITRISE_STEP_ID: nitro-builder
     - BITRISE_STEP_VERSION: 0.0.4
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/underscopeio/bitrise-step-uci-builder.git
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
@@ -50,7 +50,7 @@ workflows:
             - disable_cache: "no"
             - cache_provider: fs
             - log_provider: fs
-            - tracking_provider: uci-on-premise
+            - tracking_provider: nitro-on-premise
             - ios_certificate_url: $IOS_CERTIFICATE_URL
             - ios_certificate_passphrase: $IOS_CERTIFICATE_PASSPHRASE
   test_android:
@@ -81,7 +81,7 @@ workflows:
             - disable_cache: "no"
             - cache_provider: fs
             - log_provider: fs
-            - tracking_provider: uci-on-premise
+            - tracking_provider: nitro-on-premise
             - android_app_identifier: android.app.identifier
             - android_keystore_url: $ANDROID_KEYSTORE_URL
             - android_keystore_password: $ANDROID_KEYSTORE_PASSWORD

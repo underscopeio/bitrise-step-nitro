@@ -1,9 +1,9 @@
 title: |-
-  UCI build system
+  Nitro build system
 summary: |
-  Build React Native projects using UCI build system
+  Build React Native projects using Nitro build system
 description: |
-  This step allows you to easily run the UCI builder by providing input parameters in a friendly way.
+  This step allows you to easily run the Nitro builder by providing input parameters in a friendly way.
 website: https://github.com/underscopeio/bitrise-step-uci-builder
 source_code_url: https://github.com/underscopeio/bitrise-step-uci-builder
 support_url: https://github.com/underscopeio/bitrise-step-uci-builder/issues
@@ -68,7 +68,7 @@ inputs:
       description: "A string to indetify the build number"
       is_expand: true
       is_required: false
-  - root_directory: "$UCI_ROOT_DIRECTORY"
+  - root_directory: "$NITRO_ROOT_DIRECTORY"
     opts:
       title: "Root directory"
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
@@ -211,25 +211,25 @@ inputs:
       is_expand: true
 
   # AWS Category
-  - aws_s3_access_key_id: "$UCI_AWS_ACCESS_KEY_ID"
+  - aws_s3_access_key_id: "$NITRO_AWS_ACCESS_KEY_ID"
     opts:
       category: "AWS Storage"
       title: "Access Key Id"
       summary: "Access Key Id"
       is_expand: true
-  - aws_s3_secret_access_key: "$UCI_AWS_SECRET_ACCESS_KEY"
+  - aws_s3_secret_access_key: "$NITRO_AWS_SECRET_ACCESS_KEY"
     opts:
       category: "AWS Storage"
       title: "Secret Access Key"
       summary: "Secret Access Key"
       is_expand: true
-  - aws_s3_region: "$UCI_AWS_S3_REGION"
+  - aws_s3_region: "$NITRO_AWS_S3_REGION"
     opts:
       category: "AWS Storage"
       title: "Region"
       summary: "AWS Region"
       is_expand: true
-  - aws_s3_bucket: "$UCI_AWS_S3_BUCKET"
+  - aws_s3_bucket: "$NITRO_AWS_S3_BUCKET"
     opts:
       category: "AWS Storage"
       title: "Bucket"
@@ -245,12 +245,12 @@ inputs:
       is_expand: true
 
 outputs:
-  - UCI_LOGS_PATH:
+  - NITRO_LOGS_PATH:
     opts:
       title: "Build log location"
       summary: "The full path to access the build log."
       description: "The full path to access the build log."
-  - UCI_DEPLOY_PATH:
+  - NITRO_DEPLOY_PATH:
     opts:
       title: "Build artifacts location"
       summary: "The full path to access the build artifacts."
