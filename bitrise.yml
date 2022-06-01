@@ -4,8 +4,8 @@ project_type: ""
 app:
   envs:
     - BITRISE_STEP_ID: nitro-builder
-    - BITRISE_STEP_VERSION: 0.0.4
-    - BITRISE_STEP_GIT_CLONE_URL: https://github.com/underscopeio/bitrise-step-uci-builder.git
+    - BITRISE_STEP_VERSION: 0.1.0
+    - BITRISE_STEP_GIT_CLONE_URL: https://github.com/underscopeio/bitrise-step-nitro.git
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
     - BITRISE_APP_URL: "app.bitrise.io/APP-SLUG/"
     - BITRISE_BUILD_SLUG: "d65abbebxfc9ca4e"

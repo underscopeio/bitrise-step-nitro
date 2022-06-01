@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-STEP_VERSION=0.0.4
+STEP_VERSION=0.1.0
 
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
@@ -21,7 +21,7 @@ else
     BIN_FILE_PATH="$SCRIPT_DIR/nitro"
 
     # Download cli release
-    wget -q "https://github.com/underscopeio/bitrise-step-uci-builder/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
+    wget -q "https://github.com/underscopeio/bitrise-step-nitro/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
     chmod +x "$BIN_FILE_PATH"
 fi
 

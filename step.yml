@@ -4,9 +4,9 @@ summary: |
   Build React Native projects using Nitro build system
 description: |
   This step allows you to easily run the Nitro builder by providing input parameters in a friendly way.
-website: https://github.com/underscopeio/bitrise-step-uci-builder
-source_code_url: https://github.com/underscopeio/bitrise-step-uci-builder
-support_url: https://github.com/underscopeio/bitrise-step-uci-builder/issues
+website: https://github.com/underscopeio/bitrise-step-nitro
+source_code_url: https://github.com/underscopeio/bitrise-step-nitro
+support_url: https://github.com/underscopeio/bitrise-step-nitro/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
