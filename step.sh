@@ -32,12 +32,12 @@ date_command=$([[ "$(uname)" == "Darwin" ]] && echo "gdate" || echo "date")
 bitrise_process_started_at=$($ps_command | grep "bitrise run" | grep -v grep | sed -e 's/^\(.\{24\}\).*/\1/' | head -1)
 bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=$(date)}" "+%s%3N")
 
-envman add --key "UCI_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
+envman add --key "NITRO_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 # Build command arguments
 args=("$platform")
 args+=("--repo-path=""${BITRISE_SOURCE_DIR}""")
-args+=("--tracking-provider=uci-on-premise")
+args+=("--tracking-provider=nitro-on-premise")
 
 # Global args
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
