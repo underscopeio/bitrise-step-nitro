@@ -1,0 +1,64 @@
+{
+  "name": "bitrise-step-jpg",
+  "version": "0.1.0",
+  "repository": "git@github.com:underscopeio/bitrise-step-jpg.git",
+  "author": "Juan Pablo Garcia <juanpablogarcia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#feat/metro-cache"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "semantic-release": "19.0.2"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "beta",
+        "channel": "beta",
+        "prerelease": "beta"
+      },
+      {
+        "name": "develop",
+        "channel": "preview",
+        "prerelease": "preview"
+      }
+    ],
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "./build-nitro-cli.sh"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json"
+          ],
+          "message": "chore(release): Bump version to ${nextRelease.version}"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "dist/**"
+          ]
+        }
+      ]
+    ]
+  }
+}

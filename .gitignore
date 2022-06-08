@@ -1,5 +1,2 @@
-.bitrise*
-.gows.user.yml
-_tmp
-nitro-linux
-nitro-macos
+node_modules
+dist/**/*
