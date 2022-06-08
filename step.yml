@@ -119,6 +119,12 @@ inputs:
       summary: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
       description: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
       is_expand: false
+  - experimental_metro_cache_enabled:
+    opts:
+      title: "Allow metro bundler cache (experimental)"
+      summary: "When enabling this the build will try to take advantage of the React Native Metro cache."
+      description: "When enabling this the build will try to take advantage of the React Native Metro cache."
+      is_expand: false
 
   # Android Category
   - android_flavor:

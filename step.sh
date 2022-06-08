@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-STEP_VERSION=0.1.0
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
 
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
@@ -12,8 +13,6 @@ fi
 if [[ -n ${nitro_bin_file_path} ]] ; then
     BIN_FILE_PATH="$nitro_bin_file_path"
 else
-    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
     MACOS_BIN_FILE="nitro-macos"
     LINUX_BIN_FILE="nitro-linux"
 
@@ -21,7 +20,7 @@ else
     BIN_FILE_PATH="$SCRIPT_DIR/nitro"
 
     # Download cli release
-    wget -q "https://github.com/underscopeio/bitrise-step-nitro/releases/download/$STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
+    wget -q "https://github.com/underscopeio/bitrise-step-nitro/releases/download/$BITRISE_STEP_VERSION/$BIN_FILE" -O "$BIN_FILE_PATH"
     chmod +x "$BIN_FILE_PATH"
 fi
 
@@ -71,6 +70,10 @@ if [[ ${exclude_modified_files} == "yes" ]] || [[ ${exclude_modified_files} == "
 fi
 if [[ -n ${env_var_lookup_keys} ]] ; then
     args+=("--env-var-lookup-keys=""${env_var_lookup_keys}""")
+fi
+# shellcheck disable=SC2154
+if [[ ${experimental_metro_cache_enabled} == "yes" ]] || [[ ${experimental_metro_cache_enabled} == "true" ]]; then
+    args+=("--experimental-metro-cache-enabled")
 fi
 
 # IOS args
