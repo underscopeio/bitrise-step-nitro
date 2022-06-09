@@ -10,10 +10,6 @@ meta:
   bitrise.io:
     stack: linux-docker-android-20.04
 workflows:
-  generate_readme:
-    steps:
-      - git::https://github.com/bitrise-steplib/steps-readme-generator.git@main:
-          title: Generate README
   release:
     steps:
       - activate-ssh-key@4:
@@ -31,6 +27,8 @@ workflows:
       - cache-push@2:
           inputs:
             - compress_archive: "true"
+      - git::https://github.com/bitrise-steplib/steps-readme-generator.git@main:
+          title: Generate README
       - yarn@0:
           inputs:
             - command: semantic-release --debug
