@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SCRIPT_DIR=" $(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
 
 # shellcheck disable=SC2154
