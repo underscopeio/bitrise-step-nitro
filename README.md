@@ -1,6 +1,7 @@
 # Nitro build system
 
 [![Step changelog](https://shields.io/github/v/release/underscopeio/bitrise-step-nitro?include_prereleases&label=changelog&color=blueviolet)](https://github.com/underscopeio/bitrise-step-nitro/releases)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/underscopeio/bitrise-step-nitro/)
 
 Build React Native projects using Nitro build system
 

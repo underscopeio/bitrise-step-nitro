@@ -4,61 +4,21 @@
   "repository": "git@github.com:underscopeio/bitrise-step-nitro.git",
   "author": "Juan Pablo Garcia <juanpablogarcia@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#feat/metro-cache"
+  "scripts": {
+    "prepare": "husky install"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@semantic-release/changelog": "6.0.1",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "semantic-release": "19.0.2"
+    "semantic-release": "19.0.2",
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#development"
   },
-  "release": {
-    "branches": [
-      "main",
-      {
-        "name": "beta",
-        "channel": "beta",
-        "prerelease": "beta"
-      },
-      {
-        "name": "develop",
-        "channel": "preview",
-        "prerelease": "preview"
-      }
-    ],
-    "tagFormat": "${version}",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      [
-        "@semantic-release/exec",
-        {
-          "prepareCmd": "./build-nitro-cli.sh"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json"
-          ],
-          "message": "chore(release): Bump version to ${nextRelease.version}"
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "dist/**"
-          ]
-        }
-      ]
-    ]
+  "devDependencies": {
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
+    "husky": "8.0.1",
+    "prettier": "2.6.2",
+    "prettier-plugin-sh": "0.11.0"
   }
 }
