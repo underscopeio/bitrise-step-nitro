@@ -35,3 +35,5 @@ workflows:
 trigger_map:
   - push_branch: main
     workflow: release
+  - push_branch: develop
+    workflow: release
