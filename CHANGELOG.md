@@ -1,3 +1,10 @@
+# [0.3.0-beta.4](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.3...0.3.0-beta.4) (2022-06-10)
+
+
+### Bug Fixes
+
+* nitro reference in yarn.lock ([f6f7b17](https://github.com/underscopeio/bitrise-step-nitro/commit/f6f7b17dbfd9fa1dedbef757c160443ba5f34121))
+
 # [0.3.0-beta.3](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.2...0.3.0-beta.3) (2022-06-10)
 
 
