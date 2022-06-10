@@ -174,4 +174,4 @@ if [[ -n ${aws_s3_bucket} ]]; then
 fi
 
 # Script execution
-ls $BIN_FILE_PATH "${args[@]}"
+$BIN_FILE_PATH "${args[@]}"
