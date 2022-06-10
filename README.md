@@ -36,6 +36,8 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `cache_provider` | Choose the provider where cache artifacts will be persisted: - `fs`: File system. - `s3`: Amazon - Simple Storage Service. - `azure`: Microsoft - Azure Blob Storage. |  | `s3` |
 | `exclude_modified_files` | If you modify or delete files right after cloning your repository those changes won't impact on your build. |  | `no` |
 | `env_var_lookup_keys` | A list of env variable keys to lookup in order to determine whether the build should be cached or not. |  |  |
+| `cache_env_var_lookup_keys` | A list of env variable keys to lookup in order to determine whether the build should be cached or not. |  |  |
+| `cache_file_lookup_paths` | A list of paths (relative to the root of the repo or absolute) to lookup in order to determine whether the build should be cached or not. |  |  |
 | `experimental_metro_cache_enabled` | When enabling this the build will try to take advantage of the React Native Metro cache. |  |  |
 | `android_flavor` | Flavor |  |  |
 | `android_app_identifier` | App identifier |  |  |
@@ -43,6 +45,7 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `android_keystore_password` | Keystore password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD` |
 | `android_keystore_key_alias` | Keystore alias |  | `$BITRISEIO_ANDROID_KEYSTORE_ALIAS` |
 | `android_keystore_key_password` | Keystore key password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` |
+| `ios-scheme` | The name of the ios scheme |  |  |
 | `ios_certificate_url` | Certificate url |  | `$BITRISE_CERTIFICATE_URL` |
 | `ios_certificate_passphrase` | Certificate passphrase | sensitive | `$BITRISE_CERTIFICATE_PASSPHRASE` |
 | `ios_provisioning_profile_urls` | A string containing a '\|' separated values where provisioning profiles are located e.g. url1\|url2\|url3 |  |  |
