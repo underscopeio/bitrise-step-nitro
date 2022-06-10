@@ -80,11 +80,11 @@ fi
 # deprecated: fallback to cache_env_var_lookup_keys
 cache_env_var_lookup_keys=${cache_env_var_lookup_keys:-$env_var_lookup_keys}
 if [[ -n ${cache_env_var_lookup_keys} ]]; then
-  args+=("--cache-env-var-lookup-keys=""${cache_env_var_lookup_keys}""")
+  args+=("--cache-env-var-lookup-keys=${cache_env_var_lookup_keys}")
 fi
 
 if [[ -n ${cache_file_lookup_paths} ]]; then
-  args+=("--cache-file-lookup-paths=""${cache_file_lookup_paths}""")
+  args+=("--cache-file-lookup-paths=${cache_file_lookup_paths}")
 fi
 
 # shellcheck disable=SC2154
