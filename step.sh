@@ -94,6 +94,10 @@ fi
 
 # IOS args
 if [[ "${platform}" == "ios" ]]; then
+
+  if [[ -n ${ios_scheme} ]]; then
+    args+=("--ios-scheme=""$ios_scheme""")
+  fi
   if [[ -n ${ios_certificate_url} ]]; then
     args+=("--ios-certificate-url=""$ios_certificate_url""")
   fi
