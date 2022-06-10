@@ -34,9 +34,9 @@ bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=
 envman add --key "NITRO_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 # Build command arguments
-args=("$platform")
-args+=("--repo-path=""${BITRISE_SOURCE_DIR}""")
-args+=("--tracking-provider=nitro-on-premise")
+args=($platform)
+args+=("--repo-path" $BITRISE_SOURCE_DIR)
+args+=("--tracking-provider" "nitro-on-premise")
 
 # Global args
 if [[ ${debug} =~ ^yes$|^true$ ]]; then
@@ -49,27 +49,27 @@ if [[ ${disable_cache} =~ ^yes$|^true$ ]]; then
 fi
 
 if [[ -n ${build_id} ]]; then
-  args+=("--build-id=""${build_id}""")
+  args+=("--build-id" $build_id)
 fi
 
 if [[ -n ${project_id} ]]; then
-  args+=("--project-id=""${project_id}""")
+  args+=("--project-id" $project_id)
 fi
 
 if [[ -n ${custom_ssh_key_url} ]]; then
-  args+=("--custom-ssh-key-url=""${custom_ssh_key_url}""")
+  args+=("--custom-ssh-key-url" $custom_ssh_key_url)
 fi
 
 if [[ -n ${root_directory} ]]; then
-  args+=("--root-directory=""${root_directory}""")
+  args+=("--root-directory" $root_directory)
 fi
 
 if [[ -n ${app_label} ]]; then
-  args+=("--app-label=""${app_label}""")
+  args+=("--app-label" $app_label)
 fi
 
 if [[ -n ${cache_provider} ]]; then
-  args+=("--cache-provider=""${cache_provider}""")
+  args+=("--cache-provider" $cache_provider)
 fi
 
 # shellcheck disable=SC2154
@@ -80,11 +80,11 @@ fi
 # deprecated: fallback to cache_env_var_lookup_keys
 cache_env_var_lookup_keys=${cache_env_var_lookup_keys:-$env_var_lookup_keys}
 if [[ -n ${cache_env_var_lookup_keys} ]]; then
-  args+=("--cache-env-var-lookup-keys=${cache_env_var_lookup_keys}")
+  args+=("--cache-env-var-lookup-keys" $cache_env_var_lookup_keys)
 fi
 
 if [[ -n ${cache_file_lookup_paths} ]]; then
-  args+=("--cache-file-lookup-paths=${cache_file_lookup_paths}")
+  args+=("--cache-file-lookup-paths" $cache_file_lookup_paths)
 fi
 
 # shellcheck disable=SC2154
@@ -96,82 +96,82 @@ fi
 if [[ "${platform}" == "ios" ]]; then
 
   if [[ -n ${ios_scheme} ]]; then
-    args+=("--ios-scheme=""$ios_scheme""")
+    args+=("--ios-scheme" $ios_scheme)
   fi
   if [[ -n ${ios_certificate_url} ]]; then
-    args+=("--ios-certificate-url=""$ios_certificate_url""")
+    args+=("--ios-certificate-url" $ios_certificate_url)
   fi
 
   if [[ -n ${ios_certificate_passphrase} ]]; then
-    args+=("--ios-certificate-passphrase=""$ios_certificate_passphrase""")
+    args+=("--ios-certificate-passphrase" $ios_certificate_passphrase)
   fi
 
   if [[ -n ${ios_provisioning_profile_urls} ]]; then
     # replace | for spaces
     urls="$(echo "${ios_provisioning_profile_urls}" | sed 's/|/ /;s// /')"
-    args+=("--ios-provisioning-profile-urls=""$urls""")
+    args+=("--ios-provisioning-profile-urls" $urls)
   fi
 
   if [[ -n ${ios_provisioning_profile_url_map} ]]; then
-    args+=("--ios-provisioning-profile-url-map=""$ios_provisioning_profile_url_map""")
+    args+=("--ios-provisioning-profile-url-map" $ios_provisioning_profile_url_map)
   fi
 
   if [[ -n ${ios_provisioning_profile_specifier} ]]; then
-    args+=("--ios-provisioning-profile-specifier=""$ios_provisioning_profile_specifier""")
+    args+=("--ios-provisioning-profile-specifier" $ios_provisioning_profile_specifier)
   fi
 
   if [[ -n ${ios_xcconfig_path} ]]; then
-    args+=("--ios-xcconfig-path=""${ios_xcconfig_path}""")
+    args+=("--ios-xcconfig-path" $ios_xcconfig_path)
   fi
 
   if [[ -n ${ios_team_id} ]]; then
-    args+=("--ios-team-id=""$ios_team_id""")
+    args+=("--ios-team-id" $ios_team_id)
   fi
 fi
 
 # Android args
 if [[ "${platform}" == "android" ]]; then
   if [[ -n ${android_flavor} ]]; then
-    args+=("--android-flavor=""$android_flavor""")
+    args+=("--android-flavor" $android_flavor)
   fi
 
   if [[ -n ${android_app_identifier} ]]; then
-    args+=("--android-app-identifier=""$android_app_identifier""")
+    args+=("--android-app-identifier" $android_app_identifier)
   fi
 
   if [[ -n ${android_keystore_url} ]]; then
-    args+=("--android-keystore-url=""$android_keystore_url""")
+    args+=("--android-keystore-url" $android_keystore_url)
   fi
 
   if [[ -n ${android_keystore_password} ]]; then
-    args+=("--android-keystore-password=""$android_keystore_password""")
+    args+=("--android-keystore-password" $android_keystore_password)
   fi
 
   if [[ -n ${android_keystore_key_alias} ]]; then
-    args+=("--android-keystore-key-alias=""$android_keystore_key_alias""")
+    args+=("--android-keystore-key-alias" $android_keystore_key_alias)
   fi
 
   if [[ -n ${android_keystore_key_password} ]]; then
-    args+=("--android-keystore-key-password=""$android_keystore_key_password""")
+    args+=("--android-keystore-key-password" $android_keystore_key_password)
   fi
 fi
 
 # AWS Storage
 if [[ -n ${aws_s3_access_key_id} ]]; then
-  args+=("--aws-s3-access-key-id=""$aws_s3_access_key_id""")
+  args+=("--aws-s3-access-key-id" $aws_s3_access_key_id)
 fi
 
 if [[ -n ${aws_s3_secret_access_key} ]]; then
-  args+=("--aws-s3-secret-access-key=""$aws_s3_secret_access_key""")
+  args+=("--aws-s3-secret-access-key" $aws_s3_secret_access_key)
 fi
 
 if [[ -n ${aws_s3_region} ]]; then
-  args+=("--aws-s3-region=""$aws_s3_region""")
+  args+=("--aws-s3-region" $aws_s3_region)
 fi
 
 if [[ -n ${aws_s3_bucket} ]]; then
-  args+=("--aws-s3-bucket=""$aws_s3_bucket""")
+  args+=("--aws-s3-bucket" $aws_s3_bucket)
 fi
 
 # Script execution
-$BIN_FILE_PATH "${args[@]}"
+ls $BIN_FILE_PATH "${args[@]}"
