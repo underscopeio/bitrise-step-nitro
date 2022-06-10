@@ -1,3 +1,10 @@
+# [0.3.0-beta.6](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.5...0.3.0-beta.6) (2022-06-10)
+
+
+### Bug Fixes
+
+* fix array args parsing ([bed89fe](https://github.com/underscopeio/bitrise-step-nitro/commit/bed89fe1854fd2a924a30f8aed2f32cb078bf06f))
+
 # [0.3.0-beta.5](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.4...0.3.0-beta.5) (2022-06-10)
 
 
