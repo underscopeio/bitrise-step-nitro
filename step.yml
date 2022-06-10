@@ -121,13 +121,13 @@ inputs:
       is_expand: false
   - cache_env_var_lookup_keys:
     opts:
-      title: "List of env var keys for lookup to determine cache fingerprint (Deprecated, use `cache_env_var_lookup_keys` instead)"
+      title: "List of env var keys for lookup to determine cache fingerprint"
       summary: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
       description: "A list of env variable keys to lookup in order to determine whether the build should be cached or not."
       is_expand: false
   - cache_file_lookup_paths:
     opts:
-      title: "List of files for lookup to determine cache fingerprint (Deprecated, use `cache_env_var_lookup_keys` instead)"
+      title: "List of files for lookup to determine cache fingerprint"
       summary: "A list of paths (relative to the root of the repo or absolute) to lookup in order to determine whether the build should be cached or not."
       description: "A list of paths (relative to the root of the repo or absolute) to lookup in order to determine whether the build should be cached or not."
       is_expand: false
