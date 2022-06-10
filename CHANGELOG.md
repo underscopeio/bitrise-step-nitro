@@ -1,3 +1,10 @@
+# [0.3.0-beta.8](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.7...0.3.0-beta.8) (2022-06-10)
+
+
+### Bug Fixes
+
+* command execution line ([2e1a16a](https://github.com/underscopeio/bitrise-step-nitro/commit/2e1a16a8bfa3b606409c4730ad7ba3f55f006fa6))
+
 # [0.3.0-beta.7](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.6...0.3.0-beta.7) (2022-06-10)
 
 
