@@ -35,7 +35,7 @@ envman add --key "NITRO_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_
 
 # Build command arguments
 args=($platform)
-args+=("--repo-path" $BITRISE_SOURCE_DIR)
+args+=("--repo-path" """$BITRISE_SOURCE_DIR""")
 args+=("--tracking-provider" "nitro-on-premise")
 
 # Global args
@@ -61,11 +61,11 @@ if [[ -n ${custom_ssh_key_url} ]]; then
 fi
 
 if [[ -n ${root_directory} ]]; then
-  args+=("--root-directory" $root_directory)
+  args+=("--root-directory" """$root_directory""")
 fi
 
 if [[ -n ${app_label} ]]; then
-  args+=("--app-label" $app_label)
+  args+=("--app-label" """$app_label""")
 fi
 
 if [[ -n ${cache_provider} ]]; then
@@ -96,14 +96,14 @@ fi
 if [[ "${platform}" == "ios" ]]; then
 
   if [[ -n ${ios_scheme} ]]; then
-    args+=("--ios-scheme" $ios_scheme)
+    args+=("--ios-scheme" """$ios_scheme""")
   fi
   if [[ -n ${ios_certificate_url} ]]; then
     args+=("--ios-certificate-url" $ios_certificate_url)
   fi
 
   if [[ -n ${ios_certificate_passphrase} ]]; then
-    args+=("--ios-certificate-passphrase" $ios_certificate_passphrase)
+    args+=("--ios-certificate-passphrase" """$ios_certificate_passphrase""")
   fi
 
   if [[ -n ${ios_provisioning_profile_urls} ]]; then
@@ -117,11 +117,11 @@ if [[ "${platform}" == "ios" ]]; then
   fi
 
   if [[ -n ${ios_provisioning_profile_specifier} ]]; then
-    args+=("--ios-provisioning-profile-specifier" $ios_provisioning_profile_specifier)
+    args+=("--ios-provisioning-profile-specifier" """$ios_provisioning_profile_specifier""")
   fi
 
   if [[ -n ${ios_xcconfig_path} ]]; then
-    args+=("--ios-xcconfig-path" $ios_xcconfig_path)
+    args+=("--ios-xcconfig-path" """$ios_xcconfig_path""")
   fi
 
   if [[ -n ${ios_team_id} ]]; then
@@ -144,15 +144,15 @@ if [[ "${platform}" == "android" ]]; then
   fi
 
   if [[ -n ${android_keystore_password} ]]; then
-    args+=("--android-keystore-password" $android_keystore_password)
+    args+=("--android-keystore-password" """$android_keystore_password""")
   fi
 
   if [[ -n ${android_keystore_key_alias} ]]; then
-    args+=("--android-keystore-key-alias" $android_keystore_key_alias)
+    args+=("--android-keystore-key-alias" """$android_keystore_key_alias""")
   fi
 
   if [[ -n ${android_keystore_key_password} ]]; then
-    args+=("--android-keystore-key-password" $android_keystore_key_password)
+    args+=("--android-keystore-key-password" """$android_keystore_key_password""")
   fi
 fi
 
