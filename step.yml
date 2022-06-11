@@ -28,8 +28,6 @@ deps:
     - name: wget
     - name: pigz
     - name: gnu-sed
-  apt_get:
-    - name: wget
 toolkit:
   bash:
     entry_file: step.sh
