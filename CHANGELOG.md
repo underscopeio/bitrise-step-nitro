@@ -1,3 +1,10 @@
+# [0.3.0-beta.10](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.9...0.3.0-beta.10) (2022-06-11)
+
+
+### Bug Fixes
+
+* force unnecessary deps removal ([5b82c95](https://github.com/underscopeio/bitrise-step-nitro/commit/5b82c953bec7dc0287003d34a21028f9877f191c))
+
 # [0.3.0-beta.9](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.8...0.3.0-beta.9) (2022-06-11)
 
 
