@@ -1,3 +1,10 @@
+# [0.3.0-beta.9](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.8...0.3.0-beta.9) (2022-06-11)
+
+
+### Bug Fixes
+
+* revert nitro reference to master ([0262740](https://github.com/underscopeio/bitrise-step-nitro/commit/0262740817144d1ad6935b9426d9e649d486fd68))
+
 # [0.3.0-beta.8](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.7...0.3.0-beta.8) (2022-06-10)
 
 
