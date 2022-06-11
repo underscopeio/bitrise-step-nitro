@@ -1,3 +1,10 @@
+# [0.3.0-beta.11](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.10...0.3.0-beta.11) (2022-06-11)
+
+
+### Bug Fixes
+
+* add quotes to string arguments ([af2f671](https://github.com/underscopeio/bitrise-step-nitro/commit/af2f67140a39d78b38ecc8d0130a8a42b6db15ec))
+
 # [0.3.0-beta.10](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.9...0.3.0-beta.10) (2022-06-11)
 
 
