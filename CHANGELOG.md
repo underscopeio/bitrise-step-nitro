@@ -1,3 +1,10 @@
+# [0.3.0-beta.13](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.12...0.3.0-beta.13) (2022-06-14)
+
+
+### Bug Fixes
+
+* use export instead of envman ([5360634](https://github.com/underscopeio/bitrise-step-nitro/commit/53606349397dfbd03fbfca164933b4379dcfe93d))
+
 # [0.3.0-beta.12](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.11...0.3.0-beta.12) (2022-06-14)
 
 
