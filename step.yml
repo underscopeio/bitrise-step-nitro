@@ -57,17 +57,22 @@ inputs:
       title: "Project identifier"
       description: "A string to indetify the project"
       is_expand: true
-      is_required: false
+      is_required: true
   - build_id: "$BITRISE_BUILD_SLUG"
     opts:
       title: "Build identifier"
       description: "A string to indetify the build number"
       is_expand: true
-      is_required: false
+      is_required: true
   - root_directory: "$NITRO_ROOT_DIRECTORY"
     opts:
       title: "Root directory"
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
+      is_expand: true
+  - entry_file: "$ENTRY_FILE"
+    opts:
+      title: "The entry file for bundle generation"
+      summary: "The entry file for bundle generation"
       is_expand: true
   - custom_ssh_key_url:
     opts:
