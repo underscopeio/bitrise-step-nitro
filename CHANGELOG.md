@@ -1,3 +1,11 @@
+# [0.3.0-beta.12](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.11...0.3.0-beta.12) (2022-06-14)
+
+
+### Features
+
+* add entry file argument ([277d749](https://github.com/underscopeio/bitrise-step-nitro/commit/277d7499fb852aad5ae4d4d3f59fbd0c4b3627e3))
+* update nitro version and prettier ([a8168e4](https://github.com/underscopeio/bitrise-step-nitro/commit/a8168e456ab7a7572cbaed456bf627a0e9094c81))
+
 # [0.3.0-beta.11](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.10...0.3.0-beta.11) (2022-06-11)
 
 
