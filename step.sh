@@ -34,7 +34,7 @@ bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=
 envman add --key "NITRO_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
 
 if [[ -n ${entry_file} ]]; then
-  envman add --key "ENTRY_FILE" --value "${entry_file}"
+  export ENTRY_FILE="$entry_file"
 fi
 
 # Build command arguments
