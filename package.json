@@ -12,7 +12,7 @@
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "semantic-release": "19.0.3",
-    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#ccc4ce3a11c0c3c7e2b631b40a128ba0a8bc46ae"
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#development"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.2",

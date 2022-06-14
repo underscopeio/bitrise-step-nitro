@@ -3647,9 +3647,9 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.16.0.tgz#b778ba0831ca102c1d8ecbdec2d2bdfcc7353190"
   integrity sha512-FEikl6bR30n0T3amyBh3LoiBdqHRy/f4H80+My34HOesOKyHfOsxAPAxOoqC0JUnC1amnO0IwkYC3sko51caSw==
 
-"underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#ccc4ce3a11c0c3c7e2b631b40a128ba0a8bc46ae":
+"underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#development":
   version "0.1.0"
-  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#ccc4ce3a11c0c3c7e2b631b40a128ba0a8bc46ae"
+  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#e830470382584c4863c9a635fbef2b70e032cf8e"
 
 unique-filename@^1.1.1:
   version "1.1.1"

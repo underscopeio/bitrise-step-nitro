@@ -31,7 +31,8 @@ date_command=$([[ "$(uname)" == "Darwin" ]] && echo "gdate" || echo "date")
 bitrise_process_started_at=$($ps_command | grep "bitrise run" | grep -v grep | sed -e 's/^\(.\{24\}\).*/\1/' | head -1)
 bitrise_process_started_at_ms=$($date_command -d "${bitrise_process_started_at:=$(date)}" "+%s%3N")
 
-envman add --key "NITRO_BOOTED_AT_TIMESTAMP" --value "${bitrise_process_started_at_ms}"
+# Set environment variables
+export NITRO_BOOTED_AT_TIMESTAMP="$bitrise_process_started_at_ms"
 
 if [[ -n ${entry_file} ]]; then
   export ENTRY_FILE="$entry_file"
