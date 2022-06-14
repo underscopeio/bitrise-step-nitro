@@ -12,13 +12,13 @@
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "semantic-release": "19.0.3",
-    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#master"
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#ccc4ce3a11c0c3c7e2b631b40a128ba0a8bc46ae"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
     "husky": "8.0.1",
-    "prettier": "2.6.2",
+    "prettier": "2.7.0",
     "prettier-plugin-sh": "0.11.0"
   }
 }
