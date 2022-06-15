@@ -1,3 +1,10 @@
+# [0.3.0-beta.18](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.17...0.3.0-beta.18) (2022-06-15)
+
+
+### Features
+
+* add ios codesigning identity to step args ([b317e3c](https://github.com/underscopeio/bitrise-step-nitro/commit/b317e3cd18ce200d1783778e2d6004cfbbdb5df7))
+
 # [0.3.0-beta.17](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.16...0.3.0-beta.17) (2022-06-15)
 
 

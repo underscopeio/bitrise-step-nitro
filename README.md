@@ -47,8 +47,9 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `android_keystore_key_alias` | Keystore alias |  | `$BITRISEIO_ANDROID_KEYSTORE_ALIAS` |
 | `android_keystore_key_password` | Keystore key password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` |
 | `ios_scheme` | The name of the ios scheme |  |  |
-| `ios_certificate_url` | Certificate url |  | `$BITRISE_CERTIFICATE_URL` |
-| `ios_certificate_passphrase` | Certificate passphrase | sensitive | `$BITRISE_CERTIFICATE_PASSPHRASE` |
+| `ios_certificate_url` | Certificate url |  |  |
+| `ios_certificate_passphrase` | Certificate passphrase | sensitive |  |
+| `ios_codesigning_identity` | Codesigning identity |  |  |
 | `ios_provisioning_profile_urls` | A string containing a '\|' separated values where provisioning profiles are located e.g. url1\|url2\|url3 |  |  |
 | `ios_provisioning_profile_url_map` | A JSON value to define the define the provisioning profile url mapping:  `{"identifier": "https://ios-provisioning-profile-url-1", "identifier2": "https://ios-provisioning-profile-url-2"}`  |  |  |
 | `ios_provisioning_profile_specifier` | Not required if `Provisioning profile url map` is provided.  |  |  |
