@@ -1,3 +1,10 @@
+# [0.3.0-beta.21](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.20...0.3.0-beta.21) (2022-06-15)
+
+
+### Bug Fixes
+
+* avoid breaking if ios team not defined ([a79a806](https://github.com/underscopeio/bitrise-step-nitro/commit/a79a806fb26fdc9d9c96378a1578dc926d25dc79))
+
 # [0.3.0-beta.20](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.19...0.3.0-beta.20) (2022-06-15)
 
 
