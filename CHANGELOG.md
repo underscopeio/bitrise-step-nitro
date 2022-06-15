@@ -1,3 +1,10 @@
+# [0.3.0-beta.19](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.18...0.3.0-beta.19) (2022-06-15)
+
+
+### Bug Fixes
+
+* remove ios scheme env check ([885d7d6](https://github.com/underscopeio/bitrise-step-nitro/commit/885d7d6ca0e90be1822a225bedbfbd9d69d07711))
+
 # [0.3.0-beta.18](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.17...0.3.0-beta.18) (2022-06-15)
 
 
