@@ -46,7 +46,7 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `android_keystore_password` | Keystore password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD` |
 | `android_keystore_key_alias` | Keystore alias |  | `$BITRISEIO_ANDROID_KEYSTORE_ALIAS` |
 | `android_keystore_key_password` | Keystore key password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` |
-| `ios-scheme` | The name of the ios scheme |  |  |
+| `ios_scheme` | The name of the ios scheme |  |  |
 | `ios_certificate_url` | Certificate url |  | `$BITRISE_CERTIFICATE_URL` |
 | `ios_certificate_passphrase` | Certificate passphrase | sensitive | `$BITRISE_CERTIFICATE_PASSPHRASE` |
 | `ios_provisioning_profile_urls` | A string containing a '\|' separated values where provisioning profiles are located e.g. url1\|url2\|url3 |  |  |

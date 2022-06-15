@@ -1,3 +1,10 @@
+# [0.3.0-beta.17](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.16...0.3.0-beta.17) (2022-06-15)
+
+
+### Bug Fixes
+
+* scheme step arg name ([60529c8](https://github.com/underscopeio/bitrise-step-nitro/commit/60529c8d31deee5e6f7be3851b06c7873b80335c))
+
 # [0.3.0-beta.16](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.15...0.3.0-beta.16) (2022-06-15)
 
 
