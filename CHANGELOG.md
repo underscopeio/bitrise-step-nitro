@@ -1,3 +1,10 @@
+# [0.3.0-beta.16](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.15...0.3.0-beta.16) (2022-06-15)
+
+
+### Bug Fixes
+
+* **builder:** ios scheme not validating cli args ([a943aec](https://github.com/underscopeio/bitrise-step-nitro/commit/a943aeca1570186ab6eb47a39bd0dac0ab3bd639))
+
 # [0.3.0-beta.15](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.14...0.3.0-beta.15) (2022-06-15)
 
 
