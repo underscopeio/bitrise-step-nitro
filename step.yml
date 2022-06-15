@@ -186,19 +186,25 @@ inputs:
       title: "The name of the ios scheme"
       summary: "The name of the ios scheme"
       is_expand: true
-  - ios_certificate_url: $BITRISE_CERTIFICATE_URL
+  - ios_certificate_url:
     opts:
       category: "IOS Settings"
       title: "Certificate url"
       summary: "Certificate url"
       is_expand: true
-  - ios_certificate_passphrase: $BITRISE_CERTIFICATE_PASSPHRASE
+  - ios_certificate_passphrase:
     opts:
       category: "IOS Settings"
       title: "Certificate passphrase"
       summary: "Certificate passphrase"
       is_expand: true
       is_sensitive: true
+  - ios_codesigning_identity:
+    opts:
+      category: "IOS Codesigning Identity"
+      title: "Codesigning identity "
+      summary: "Codesigning identity"
+      is_expand: true
   - ios_provisioning_profile_urls:
     opts:
       category: "IOS Settings"

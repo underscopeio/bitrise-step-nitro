@@ -107,12 +107,17 @@ if [[ "${platform}" == "ios" ]]; then
   if [[ -n ${ios_scheme} ]]; then
     args+=("--ios-scheme" "$ios_scheme")
   fi
+
   if [[ -n ${ios_certificate_url} ]]; then
     args+=("--ios-certificate-url" "$ios_certificate_url")
   fi
 
   if [[ -n ${ios_certificate_passphrase} ]]; then
     args+=("--ios-certificate-passphrase" "$ios_certificate_passphrase")
+  fi
+
+  if [[ -n ${ios_codesigning_identity} ]]; then
+    args+=("--ios-codesigning-identity" "$ios_codesigning_identity")
   fi
 
   if [[ -n ${ios_provisioning_profile_urls} ]]; then
