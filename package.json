@@ -1,6 +1,6 @@
 {
   "name": "bitrise-step-nitro",
-  "version": "0.3.0-beta.16",
+  "version": "0.3.0-beta.17",
   "repository": "git@github.com:underscopeio/bitrise-step-nitro.git",
   "author": "Juan Pablo Garcia <juanpablogarcia@gmail.com>",
   "license": "MIT",

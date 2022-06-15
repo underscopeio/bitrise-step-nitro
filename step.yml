@@ -180,7 +180,7 @@ inputs:
       is_sensitive: true
 
   # IOS Category
-  - ios-scheme:
+  - ios_scheme:
     opts:
       category: "IOS Settings"
       title: "The name of the ios scheme"
