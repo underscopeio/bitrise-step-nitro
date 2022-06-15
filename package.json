@@ -1,6 +1,6 @@
 {
   "name": "bitrise-step-nitro",
-  "version": "0.3.0-beta.15",
+  "version": "0.3.0-beta.16",
   "repository": "git@github.com:underscopeio/bitrise-step-nitro.git",
   "author": "Juan Pablo Garcia <juanpablogarcia@gmail.com>",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "semantic-release": "19.0.3",
-    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#development"
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#fix/ios-scheme-not-validating-cli-args"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
