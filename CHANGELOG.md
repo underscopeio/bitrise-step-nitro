@@ -1,3 +1,10 @@
+# [0.3.0-beta.15](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.14...0.3.0-beta.15) (2022-06-15)
+
+
+### Bug Fixes
+
+* array arguments parser ([42b56a3](https://github.com/underscopeio/bitrise-step-nitro/commit/42b56a3006ffa328575cfab50fa2bf07a9c36888))
+
 # [0.3.0-beta.14](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.13...0.3.0-beta.14) (2022-06-14)
 
 
