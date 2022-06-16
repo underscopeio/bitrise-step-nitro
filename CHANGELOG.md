@@ -1,3 +1,10 @@
+# [0.3.0-beta.22](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.21...0.3.0-beta.22) (2022-06-16)
+
+
+### Bug Fixes
+
+* disable mandatory ios team arg ([21d0c82](https://github.com/underscopeio/bitrise-step-nitro/commit/21d0c8229421b84d31db5c4dc31b1d20adc68f86))
+
 # [0.3.0-beta.21](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.20...0.3.0-beta.21) (2022-06-15)
 
 
