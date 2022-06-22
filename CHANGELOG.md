@@ -1,3 +1,10 @@
+# [0.3.0-beta.23](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.22...0.3.0-beta.23) (2022-06-22)
+
+
+### Bug Fixes
+
+* add missing deps ([00267a3](https://github.com/underscopeio/bitrise-step-nitro/commit/00267a3f344685c86ed4abc4006353bf597639fb))
+
 # [0.3.0-beta.22](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.21...0.3.0-beta.22) (2022-06-16)
 
 
