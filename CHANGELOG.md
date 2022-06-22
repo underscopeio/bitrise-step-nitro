@@ -1,3 +1,16 @@
+# [0.3.0-beta.27](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.26...0.3.0-beta.27) (2022-06-22)
+
+
+### Bug Fixes
+
+* revert bump and remove debug ([49b4b53](https://github.com/underscopeio/bitrise-step-nitro/commit/49b4b53fe29e75a31e98a0d03cb420745959c6d1))
+* update yarn.lock ([5b280be](https://github.com/underscopeio/bitrise-step-nitro/commit/5b280be6c6b0bfc0ad83ff2a3f798cc1f96d046f))
+
+
+### Features
+
+* improve ios step options ([07bbb2e](https://github.com/underscopeio/bitrise-step-nitro/commit/07bbb2e344fe91eb09d28f58e908532be848c6e7))
+
 # [0.3.0-beta.26](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.25...0.3.0-beta.26) (2022-06-22)
 
 
