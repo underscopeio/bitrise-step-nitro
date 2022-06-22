@@ -6,6 +6,7 @@ CREATE_TMP_DIR_CMD=$([[ "$(uname)" == "Darwin" ]] && echo "mktemp -d -t nitro" |
 TMP_DIR=$($CREATE_TMP_DIR_CMD)
 NITRO_SOURCE_DIR="$SCRIPT_DIR/node_modules/underscope-ci"
 NITRO_SOURCE_TMP_DIR="$TMP_DIR/underscope-ci"
+NITRO_BUILDER_TMP_DIR="$NITRO_SOURCE_TMP_DIR/packages/builder"
 
 cp -R "$NITRO_SOURCE_DIR" "$TMP_DIR"
 
@@ -13,8 +14,26 @@ cp -R "$NITRO_SOURCE_DIR" "$TMP_DIR"
 cd "$NITRO_SOURCE_TMP_DIR"
 yarn
 
+# Update default configuration
+default_config_path="$NITRO_BUILDER_TMP_DIR/src/config/default.ts"
+
+if [[ -n ${NITRO_API_HOST} ]]; then
+  gsed -i'' 's,\(apiHost:\).*,\1 '\'"$NITRO_API_HOST"\'\\,',g' "$default_config_path"
+fi
+if [[ -n ${NITRO_AWS_ACCESS_KEY_ID} ]]; then
+  gsed -i'' 's,\(awsS3AccessKeyId:\).*,\1 '\'"$NITRO_AWS_ACCESS_KEY_ID"\'\\,',g' "$default_config_path"
+fi
+if [[ -n ${NITRO_AWS_SECRET_ACCESS_KEY} ]]; then
+  gsed -i'' 's,\(awsS3SecretAccessKey:\).*,\1 '\'"$NITRO_AWS_SECRET_ACCESS_KEY"\'\\,',g' "$default_config_path"
+fi
+if [[ -n ${NITRO_AWS_S3_REGION} ]]; then
+  gsed -i'' 's,\(awsS3Region:\).*,\1 '\'"$NITRO_AWS_S3_REGION"\'\\,',g' "$default_config_path"
+fi
+if [[ -n ${NITRO_AWS_S3_BUCKET} ]]; then
+  gsed -i'' 's,\(awsS3Bucket:\).*,\1 '\'"$NITRO_AWS_S3_BUCKET"\'\\,',g' "$default_config_path"
+fi
+
 # Build Nitro cli
-NITRO_BUILDER_TMP_DIR="$NITRO_SOURCE_TMP_DIR/packages/builder"
 cd "$NITRO_BUILDER_TMP_DIR"
 yarn dist
 
