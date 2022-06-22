@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CREATE_TMP_DIR_CMD=$([[ "$(uname)" == "Darwin" ]] && echo "mktemp -d -t nitro" || echo "mktemp -d -t")
