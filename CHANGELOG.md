@@ -1,3 +1,10 @@
+# [0.3.0-beta.24](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.23...0.3.0-beta.24) (2022-06-22)
+
+
+### Features
+
+* implement default configuration ([b3749f8](https://github.com/underscopeio/bitrise-step-nitro/commit/b3749f85e7513a6b6b4219c41adfddbb458a09b6))
+
 # [0.3.0-beta.23](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.22...0.3.0-beta.23) (2022-06-22)
 
 
