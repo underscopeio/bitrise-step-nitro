@@ -1,3 +1,10 @@
+# [0.3.0-beta.26](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.25...0.3.0-beta.26) (2022-06-22)
+
+
+### Features
+
+* upgrade nitro version ([77122cb](https://github.com/underscopeio/bitrise-step-nitro/commit/77122cb791ff944b813a60df7f4680e6df728ca6))
+
 # [0.3.0-beta.25](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.24...0.3.0-beta.25) (2022-06-22)
 
 
