@@ -1,3 +1,12 @@
+# [0.3.0-beta.25](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.24...0.3.0-beta.25) (2022-06-22)
+
+
+### Bug Fixes
+
+* default config path ([a08fa89](https://github.com/underscopeio/bitrise-step-nitro/commit/a08fa89d3286125f70b7003904034fe451f5514b))
+* include default config values ([f349368](https://github.com/underscopeio/bitrise-step-nitro/commit/f349368847886309e3be9dfece00476f72bfe4ef))
+* replace gsed for sed ([4bb4ed3](https://github.com/underscopeio/bitrise-step-nitro/commit/4bb4ed38b60949760846b52902dfbad0efcb770b))
+
 # [0.3.0-beta.24](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.23...0.3.0-beta.24) (2022-06-22)
 
 
