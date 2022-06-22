@@ -3659,7 +3659,7 @@ uglify-js@^3.1.4:
 
 "underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#feat/default-config":
   version "0.1.0"
-  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#b17ca558d4def922b9b5b87579834e741a66a0aa"
+  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#7a3594e37da4a3c549377e4aba92cbaa9788fa0f"
 
 unique-filename@^1.1.1:
   version "1.1.1"

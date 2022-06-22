@@ -31,7 +31,7 @@ workflows:
           title: Generate README
       - yarn@0:
           inputs:
-            - command: semantic-release --debug
+            - command: semantic-release
 trigger_map:
   - push_branch: main
     workflow: release
