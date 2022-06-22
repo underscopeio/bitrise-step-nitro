@@ -126,10 +126,6 @@ if [[ "${platform}" == "ios" ]]; then
     args+=("--ios-provisioning-profile-urls" ${ios_provisioning_profile_urls_value[@]})
   fi
 
-  if [[ -n ${ios_provisioning_profile_url_map} ]]; then
-    args+=("--ios-provisioning-profile-url-map" "$ios_provisioning_profile_url_map")
-  fi
-
   if [[ -n ${ios_provisioning_profile_specifier} ]]; then
     args+=("--ios-provisioning-profile-specifier" "$ios_provisioning_profile_specifier")
   fi
@@ -140,6 +136,10 @@ if [[ "${platform}" == "ios" ]]; then
 
   if [[ -n ${ios_team_id} ]]; then
     args+=("--ios-team-id" "$ios_team_id")
+  fi
+
+  if [[ -n ${ios_export_method} ]]; then
+    args+=("--ios-export-method" "$ios_export_method")
   fi
 fi
 

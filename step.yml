@@ -193,7 +193,7 @@ inputs:
     opts:
       category: "IOS Settings"
       title: "Certificate url"
-      summary: "Certificate url"
+      summary: "The url to download and install the certificate"
       is_expand: true
   - ios_certificate_passphrase:
     opts:
@@ -205,7 +205,7 @@ inputs:
   - ios_codesigning_identity:
     opts:
       category: "IOS Codesigning Identity"
-      title: "Codesigning identity "
+      title: "Codesigning identity"
       summary: "Codesigning identity"
       is_expand: true
   - ios_provisioning_profile_urls:
@@ -214,22 +214,11 @@ inputs:
       title: "Provisioning profile urls"
       summary: "A string containing a '|' separated values where provisioning profiles are located e.g. url1|url2|url3"
       is_expand: true
-  - ios_provisioning_profile_url_map:
-    opts:
-      category: "IOS Settings"
-      title: "Provisioning profile url map"
-      summary: |
-        A JSON value to define the define the provisioning profile url mapping:
-
-        `{"identifier": "https://ios-provisioning-profile-url-1", "identifier2": "https://ios-provisioning-profile-url-2"}`
-
-      is_expand: true
   - ios_provisioning_profile_specifier:
     opts:
       category: "IOS Settings"
       title: "Provisioning profile specifier"
-      summary: |
-        Not required if `Provisioning profile url map` is provided.
+      summary: The name of the provisioning profile when using a single one
       is_expand: true
   - ios_xcconfig_path:
     opts:
@@ -243,6 +232,15 @@ inputs:
       title: "Team ID"
       summary: "Specify the Team ID you want to use for the Apple Developer Portal"
       is_expand: true
+  - ios_export_method:
+    opts:
+      category: "IOS Settings"
+      title: "Export Method"
+      summary: "Specify the ios export method with which to generate the IPA"
+      is_expand: true
+      value_options:
+        - "ad-hoc"
+        - "app-store"
 
   # AWS Category
   - aws_s3_access_key_id: "$NITRO_AWS_ACCESS_KEY_ID"
