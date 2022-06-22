@@ -14,6 +14,9 @@ cp -R "$NITRO_SOURCE_DIR" "$TMP_DIR"
 cd "$NITRO_SOURCE_TMP_DIR"
 yarn
 
+ls "$NITRO_BUILDER_TMP_DIR/src"
+ls "$NITRO_BUILDER_TMP_DIR/src/config"
+
 # Update default configuration
 default_config_path="$NITRO_BUILDER_TMP_DIR/src/config/default.ts"
 
