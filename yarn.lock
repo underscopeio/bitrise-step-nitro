@@ -3660,7 +3660,7 @@ uglify-js@^3.1.4:
 
 "underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#fix/ios-scheme-not-validating-cli-args":
   version "0.1.0"
-  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#80308ee7a517f1b4dc26a80582bf7108c08f7dc5"
+  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#63321e6db4e638ffaad3d3d15cd188abeeba4776"
 
 unique-filename@^1.1.1:
   version "1.1.1"
