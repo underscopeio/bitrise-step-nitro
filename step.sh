@@ -103,10 +103,6 @@ fi
 
 # IOS args
 if [[ "${platform}" == "ios" ]]; then
-  if [[ -n ${ios_export_method} ]]; then
-    args+=("--ios-export-method" "$ios_export_method")
-  fi
-
   if [[ -n ${ios_scheme} ]]; then
     args+=("--ios-scheme" "$ios_scheme")
   fi

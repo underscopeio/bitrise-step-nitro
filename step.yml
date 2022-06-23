@@ -183,12 +183,6 @@ inputs:
       is_sensitive: true
 
   # IOS Category
-  - ios_export_method: ad-hoc
-    opts:
-      category: "IOS Settings"
-      title: "The export method used to generate the IPA"
-      summary: "The export method used to generate the IPA"
-      is_expand: true
   - ios_scheme:
     opts:
       category: "IOS Settings"
@@ -238,11 +232,11 @@ inputs:
       title: "Team ID"
       summary: "Specify the Team ID you want to use for the Apple Developer Portal"
       is_expand: true
-  - ios_export_method:
+  - ios_export_method: "ad-hoc"
     opts:
       category: "IOS Settings"
       title: "Export Method"
-      summary: "Specify the ios export method with which to generate the IPA"
+      summary: "The export method used to generate the IPA"
       is_expand: true
       value_options:
         - "ad-hoc"
