@@ -1,3 +1,10 @@
+# [0.3.0-beta.29](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.28...0.3.0-beta.29) (2022-06-23)
+
+
+### Features
+
+* set default for ios export method ([55196df](https://github.com/underscopeio/bitrise-step-nitro/commit/55196dfea848c294e9ff29344a42f146255c3a44))
+
 # [0.3.0-beta.28](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.27...0.3.0-beta.28) (2022-06-23)
 
 
