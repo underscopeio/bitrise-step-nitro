@@ -46,6 +46,7 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `android_keystore_password` | Keystore password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD` |
 | `android_keystore_key_alias` | Keystore alias |  | `$BITRISEIO_ANDROID_KEYSTORE_ALIAS` |
 | `android_keystore_key_password` | Keystore key password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` |
+| `ios_export_method` | The export method used to generate the IPA |  | `ad-hoc` |
 | `ios_scheme` | The name of the ios scheme |  |  |
 | `ios_certificate_url` | The url to download and install the certificate |  |  |
 | `ios_certificate_passphrase` | Certificate passphrase | sensitive |  |
