@@ -183,6 +183,12 @@ inputs:
       is_sensitive: true
 
   # IOS Category
+  - ios_export_method: ad-hoc
+    opts:
+      category: "IOS Settings"
+      title: "The export method used to generate the IPA"
+      summary: "The export method used to generate the IPA"
+      is_expand: true
   - ios_scheme:
     opts:
       category: "IOS Settings"
