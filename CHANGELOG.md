@@ -1,3 +1,10 @@
+# [0.3.0-beta.30](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.29...0.3.0-beta.30) (2022-06-23)
+
+
+### Features
+
+* expand variables in step input ([7ca829e](https://github.com/underscopeio/bitrise-step-nitro/commit/7ca829e619efb4d5a5c249ca911d5c86c978f68f))
+
 # [0.3.0-beta.29](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.28...0.3.0-beta.29) (2022-06-23)
 
 
