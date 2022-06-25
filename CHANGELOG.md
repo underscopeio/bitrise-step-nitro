@@ -1,3 +1,10 @@
+# [0.3.0-beta.32](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.31...0.3.0-beta.32) (2022-06-25)
+
+
+### Bug Fixes
+
+* experimental metro cache option not detected ([d709633](https://github.com/underscopeio/bitrise-step-nitro/commit/d70963370f1e05ea0f8e0af7e6ccaff3437a60d4))
+
 # [0.3.0-beta.31](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.30...0.3.0-beta.31) (2022-06-24)
 
 
