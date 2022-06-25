@@ -97,7 +97,7 @@ if [[ -n ${cache_file_lookup_paths} ]]; then
 fi
 
 # shellcheck disable=SC2154
-if [[ "${experimental_metro_cache_enabled}" =~ ^yes$|^true$ ]]; then
+if [[ "${experimental_metro_cache_enabled}" == "true" || "${experimental_metro_cache_enabled}" == "yes" ]]; then
   args+=("--experimental-metro-cache-enabled")
 fi
 
