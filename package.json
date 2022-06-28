@@ -12,7 +12,7 @@
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "semantic-release": "19.0.3",
-    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#fix/ios-scheme-not-validating-cli-args"
+    "underscope-ci": "ssh://git@github.com:underscopeio/underscope-ci.git#development"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
