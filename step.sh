@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
 
 # shellcheck disable=SC2154
-if [[ ${debug} =~ ^yes$|^true$ ]]; then
+if [[ "${debug}" == "true" || "${debug}" == "yes" ]]; then
   set -x
 fi
 
@@ -44,13 +44,18 @@ args+=("--repo-path" "$BITRISE_SOURCE_DIR")
 args+=("--tracking-provider" "nitro-on-premise")
 
 # Global args
-if [[ ${debug} =~ ^yes$|^true$ ]]; then
+if [[ "${debug}" == "true" || "${debug}" == "yes" ]]; then
   args+=("--verbose")
 fi
 
 # shellcheck disable=SC2154
-if [[ ${disable_cache} =~ ^yes$|^true$ ]]; then
+if [[ "${disable_cache}" == "true" || "${disable_cache}" == "yes" ]]; then
   args+=("--disable-cache")
+fi
+
+# shellcheck disable=SC2154
+if [[ "${disable_auto_versioning}" == "true" || "${disable_auto_versioning}" == "yes" ]]; then
+  args+=("--disable-auto-versioning")
 fi
 
 if [[ -n ${build_id} ]]; then
@@ -78,7 +83,7 @@ if [[ -n ${cache_provider} ]]; then
 fi
 
 # shellcheck disable=SC2154
-if [[ ${exclude_modified_files} =~ ^yes$|^true$ ]]; then
+if [[ "${exclude_modified_files}" == "true" || "${exclude_modified_files}" == "yes" ]]; then
   args+=("--exclude-modified-files")
 fi
 

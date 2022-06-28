@@ -52,7 +52,9 @@ inputs:
       title: Debug
       summary: Enable verbose logs
       description: "Enable verbose logs"
-      value_options: ["no", "yes"]
+      value_options:
+        - "yes"
+        - "no"
       is_required: true
   # Not Required
   - project_id: "$BITRISE_APP_URL"
@@ -82,6 +84,14 @@ inputs:
       title: "Custom SSH key url"
       summary: "If provided will add a new key to the ssh agent."
       is_expand: true
+  - disable_auto_versioning: "no"
+    opts:
+      title: "Disable auto-versioning"
+      summary: "This option makes nitro detect the version name and generate a new version code."
+      is_expand: true
+      value_options:
+        - "yes"
+        - "no"
   - disable_cache: "no"
     opts:
       title: "Disable builds caching"
