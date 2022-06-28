@@ -1,3 +1,10 @@
+# [0.3.0-beta.36](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.35...0.3.0-beta.36) (2022-06-28)
+
+
+### Features
+
+* point to the latest nitro version ([f237209](https://github.com/underscopeio/bitrise-step-nitro/commit/f237209a37d66133ff4b9924b07ef9710f9610e7))
+
 # [0.3.0-beta.35](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.34...0.3.0-beta.35) (2022-06-28)
 
 
