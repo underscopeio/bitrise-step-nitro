@@ -32,6 +32,7 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `root_directory` | The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory. |  | `$NITRO_ROOT_DIRECTORY` |
 | `entry_file` | The entry file for bundle generation |  | `$ENTRY_FILE` |
 | `custom_ssh_key_url` | If provided will add a new key to the ssh agent. |  |  |
+| `disable_auto_versioning` | This option makes nitro detect the version name and generate a new version code. |  | `no` |
 | `disable_cache` | When setting this option to `yes` build cache optimizations won't be performed. |  | `no` |
 | `app_label` | The application label displayed in the mobile app. Defaults to the name field of the `package.json` file. |  |  |
 | `cache_provider` | Choose the provider where cache artifacts will be persisted: - `fs`: File system. - `s3`: Amazon - Simple Storage Service. - `azure`: Microsoft - Azure Blob Storage. |  | `s3` |

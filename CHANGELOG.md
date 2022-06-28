@@ -1,3 +1,10 @@
+# [0.3.0-beta.33](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.32...0.3.0-beta.33) (2022-06-28)
+
+
+### Features
+
+* add auto-versioning option ([30c89ad](https://github.com/underscopeio/bitrise-step-nitro/commit/30c89ad7f06a3db0d0ea1cc6d8f7f4f20e03e6e6))
+
 # [0.3.0-beta.32](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.31...0.3.0-beta.32) (2022-06-25)
 
 
