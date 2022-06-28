@@ -1,3 +1,10 @@
+# [0.3.0-beta.35](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.34...0.3.0-beta.35) (2022-06-28)
+
+
+### Features
+
+* add version name and code options ([67c97eb](https://github.com/underscopeio/bitrise-step-nitro/commit/67c97eb57084db839516f170331b302b0d548a4e))
+
 # [0.3.0-beta.34](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.33...0.3.0-beta.34) (2022-06-28)
 
 
