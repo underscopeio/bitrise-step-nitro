@@ -74,6 +74,14 @@ if [[ -n ${root_directory} ]]; then
   args+=("--root-directory" "$root_directory")
 fi
 
+if [[ -n ${version_name} ]]; then
+  args+=("--version-name" "$version_name")
+fi
+
+if [[ -n ${version_code} ]]; then
+  args+=("--version-code" "$version_code")
+fi
+
 if [[ -n ${app_label} ]]; then
   args+=("--app-label" "$app_label")
 fi

@@ -74,6 +74,16 @@ inputs:
       title: "Root directory"
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
       is_expand: true
+  - version_name: 
+    opts:
+      title: "Version name"
+      summary: "The version name for the app"
+      is_expand: true
+  - version_code: 
+    opts:
+      title: "Version code"
+      summary: "The version code for the app"
+      is_expand: true
   - entry_file: "$ENTRY_FILE"
     opts:
       title: "The entry file for bundle generation"
@@ -84,14 +94,6 @@ inputs:
       title: "Custom SSH key url"
       summary: "If provided will add a new key to the ssh agent."
       is_expand: true
-  - disable_auto_versioning: "no"
-    opts:
-      title: "Disable auto-versioning"
-      summary: "This option makes nitro detect the version name and generate a new version code."
-      is_expand: true
-      value_options:
-        - "yes"
-        - "no"
   - disable_cache: "no"
     opts:
       title: "Disable builds caching"
