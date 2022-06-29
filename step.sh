@@ -161,10 +161,6 @@ if [[ "${platform}" == "android" ]]; then
     args+=("--android-flavor" "$android_flavor")
   fi
 
-  if [[ -n ${android_app_identifier} ]]; then
-    args+=("--android-app-identifier" "$android_app_identifier")
-  fi
-
   if [[ -n ${android_keystore_url} ]]; then
     args+=("--android-keystore-url" "$android_keystore_url")
   fi

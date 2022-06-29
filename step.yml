@@ -74,12 +74,12 @@ inputs:
       title: "Root directory"
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
       is_expand: true
-  - version_name: 
+  - version_name:
     opts:
       title: "Version name"
       summary: "The version name for the app"
       is_expand: true
-  - version_code: 
+  - version_code:
     opts:
       title: "Version code"
       summary: "The version code for the app"
@@ -160,12 +160,6 @@ inputs:
       category: "Android Settings"
       title: "Flavor"
       summary: "Flavor"
-      is_expand: true
-  - android_app_identifier:
-    opts:
-      category: "Android Settings"
-      title: "App identifier"
-      summary: "App identifier"
       is_expand: true
   - android_keystore_url: "$BITRISEIO_ANDROID_KEYSTORE_URL"
     opts:
