@@ -4,8 +4,8 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CREATE_TMP_DIR_CMD=$([[ "$(uname)" == "Darwin" ]] && echo "mktemp -d -t nitro" || echo "mktemp -d -t")
 TMP_DIR=$($CREATE_TMP_DIR_CMD)
-NITRO_SOURCE_DIR="$SCRIPT_DIR/node_modules/underscope-ci"
-NITRO_SOURCE_TMP_DIR="$TMP_DIR/underscope-ci"
+NITRO_SOURCE_DIR="$SCRIPT_DIR/node_modules/nitro"
+NITRO_SOURCE_TMP_DIR="$TMP_DIR/nitro"
 NITRO_BUILDER_TMP_DIR="$NITRO_SOURCE_TMP_DIR/packages/builder"
 
 cp -R "$NITRO_SOURCE_DIR" "$TMP_DIR"
