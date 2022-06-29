@@ -1,3 +1,10 @@
+# [0.3.0-beta.39](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.38...0.3.0-beta.39) (2022-06-29)
+
+
+### Bug Fixes
+
+* update default configuration ([9438262](https://github.com/underscopeio/bitrise-step-nitro/commit/9438262d874a32da81fccc7f79bfcc0c39c396e9))
+
 # [0.3.0-beta.38](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.37...0.3.0-beta.38) (2022-06-29)
 
 
