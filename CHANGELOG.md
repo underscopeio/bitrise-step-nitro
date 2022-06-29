@@ -1,3 +1,10 @@
+# [0.3.0-beta.37](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.36...0.3.0-beta.37) (2022-06-29)
+
+
+### Features
+
+* remove app-identifier argument ([#12](https://github.com/underscopeio/bitrise-step-nitro/issues/12)) ([1bc2b3a](https://github.com/underscopeio/bitrise-step-nitro/commit/1bc2b3ac5262e94426c590a749fd323923008272))
+
 # [0.3.0-beta.36](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.35...0.3.0-beta.36) (2022-06-28)
 
 

@@ -43,7 +43,6 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `cache_file_lookup_paths` | A list of paths (relative to the root of the repo or absolute) to lookup in order to determine whether the build should be cached or not. |  |  |
 | `experimental_metro_cache_enabled` | When enabling this the build will try to take advantage of the React Native Metro cache. |  |  |
 | `android_flavor` | Flavor |  |  |
-| `android_app_identifier` | App identifier |  |  |
 | `android_keystore_url` | Keystore url |  | `$BITRISEIO_ANDROID_KEYSTORE_URL` |
 | `android_keystore_password` | Keystore password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD` |
 | `android_keystore_key_alias` | Keystore alias |  | `$BITRISEIO_ANDROID_KEYSTORE_ALIAS` |
