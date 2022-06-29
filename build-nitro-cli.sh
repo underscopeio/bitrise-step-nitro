@@ -6,7 +6,7 @@ CREATE_TMP_DIR_CMD=$([[ "$(uname)" == "Darwin" ]] && echo "mktemp -d -t nitro" |
 TMP_DIR=$($CREATE_TMP_DIR_CMD)
 NITRO_SOURCE_DIR="$SCRIPT_DIR/node_modules/nitro"
 NITRO_SOURCE_TMP_DIR="$TMP_DIR/nitro"
-NITRO_BUILDER_TMP_DIR="$NITRO_SOURCE_TMP_DIR/packages/builder"
+NITRO_CLI_TMP_DIR="$NITRO_SOURCE_TMP_DIR/packages/cli"
 
 cp -R "$NITRO_SOURCE_DIR" "$TMP_DIR"
 
@@ -15,7 +15,7 @@ cd "$NITRO_SOURCE_TMP_DIR"
 yarn
 
 # Update default configuration
-default_config_path="$NITRO_BUILDER_TMP_DIR/src/config/default.ts"
+default_config_path="$NITRO_CLI_TMP_DIR/src/config/default.ts"
 
 if [[ -n ${NITRO_API_HOST} ]]; then
   sed -i'' 's,\(apiHost:\).*,\1 '\'"$NITRO_API_HOST"\'\\,',g' "$default_config_path"
@@ -34,13 +34,13 @@ if [[ -n ${NITRO_AWS_S3_BUCKET} ]]; then
 fi
 
 # Build Nitro cli
-cd "$NITRO_BUILDER_TMP_DIR"
+cd "$NITRO_CLI_TMP_DIR"
 yarn dist
 
 # Copy Nitro binaries to publish a new release
 cd "$SCRIPT_DIR"
 rm -rf "$SCRIPT_DIR/dist"
-cp -R "$NITRO_BUILDER_TMP_DIR/dist" "$SCRIPT_DIR"
+cp -R "$NITRO_CLI_TMP_DIR/dist" "$SCRIPT_DIR"
 
 # Remove temp dir
 rm -rf "$TMP_DIR"
