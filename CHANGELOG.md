@@ -1,3 +1,15 @@
+# [0.3.0-beta.38](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.37...0.3.0-beta.38) (2022-06-29)
+
+
+### Bug Fixes
+
+* rename builder to cli ([472f88a](https://github.com/underscopeio/bitrise-step-nitro/commit/472f88af28e61be587d733631fc878f0aec4fb32))
+
+
+### Features
+
+* update nitro reference ([3de8191](https://github.com/underscopeio/bitrise-step-nitro/commit/3de8191abe0cca1692e3317fd68f5161e2822b21))
+
 # [0.3.0-beta.37](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0-beta.36...0.3.0-beta.37) (2022-06-29)
 
 
