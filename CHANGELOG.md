@@ -1,3 +1,10 @@
+# [0.4.0-beta.1](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0...0.4.0-beta.1) (2022-07-04)
+
+
+### Features
+
+* implement fail-safe flag ([d721199](https://github.com/underscopeio/bitrise-step-nitro/commit/d721199577c05ca18763591313e83d9b37848cb3))
+
 # [0.3.0](https://github.com/underscopeio/bitrise-step-nitro/compare/0.2.0...0.3.0) (2022-06-29)
 
 
