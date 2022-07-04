@@ -69,6 +69,11 @@ inputs:
       description: "A string to indetify the build number"
       is_expand: true
       is_required: true
+  - output_directory: "$BITRISE_DEPLOY_DIR"
+    opts:
+      title: "Output directory"
+      summary: "The path to the directory where to place all of Nitro's output files"
+      is_expand: true
   - root_directory: "$NITRO_ROOT_DIRECTORY"
     opts:
       title: "Root directory"
