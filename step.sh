@@ -1,13 +1,18 @@
 #!/bin/bash
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
+# shellcheck disable=SC2154
+if [[ "${fail_safe}" == "true" || "${fail_safe}" == "yes" ]]; then
+  set +e
+fi
 
 # shellcheck disable=SC2154
 if [[ "${debug}" == "true" || "${debug}" == "yes" ]]; then
   set -x
 fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
 
 # Binary initialization
 if [[ -n ${nitro_bin_file_path} ]]; then
@@ -197,3 +202,10 @@ fi
 
 # Script execution
 $BIN_FILE_PATH "${args[@]}"
+
+exit_code=$?
+
+if [[ exit_code -ne 0 ]]; then
+  echo "⚠️ Nitro has thrown a '${exit_code}' error code while running on fail-safe mode. You can check 'NITRO_BUILD_FAILED' value in further steps."
+  envman add --key "NITRO_BUILD_FAILED" --value "true"
+fi

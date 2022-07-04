@@ -56,7 +56,6 @@ inputs:
         - "yes"
         - "no"
       is_required: true
-  # Not Required
   - project_id: "$BITRISE_APP_URL"
     opts:
       title: "Project identifier"
@@ -73,6 +72,12 @@ inputs:
     opts:
       title: "Root directory"
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
+      is_expand: true
+  # Not Required
+  - fail_safe:
+    opts:
+      title: "Fail-safe mode"
+      summary: "Runing the app in this mode allows you to prevent the build to fail but you can check the status in further steps."
       is_expand: true
   - version_name:
     opts:
