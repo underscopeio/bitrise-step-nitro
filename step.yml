@@ -288,13 +288,18 @@ inputs:
       is_expand: true
 
 outputs:
+  - NITRO_OUTPUT_DIR:
+    opts:
+      title: "Output directory"
+      summary: "The path to the directory where to place all of Nitro's output files"
+      description: "The path to the directory where to place all of Nitro's output files"
   - NITRO_LOGS_PATH:
     opts:
       title: "Build log location"
-      summary: "The full path to access the build log."
-      description: "The full path to access the build log."
+      summary: "The full path to access the build log"
+      description: "The full path to access the build log"
   - NITRO_DEPLOY_PATH:
     opts:
       title: "Build artifacts location"
-      summary: "The full path to access the build artifacts."
-      description: "The full path to access the build artifacts."
+      summary: "The full path to access the build artifacts"
+      description: "The full path to access the build artifacts"
