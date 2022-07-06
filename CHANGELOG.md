@@ -1,3 +1,11 @@
+# [0.4.0-beta.2](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.1...0.4.0-beta.2) (2022-07-06)
+
+
+### Features
+
+* implement output-directory option ([c9f5009](https://github.com/underscopeio/bitrise-step-nitro/commit/c9f5009d848203ae33826c1228a22f7e365e7fec))
+* point to the latest nitro version ([c5d24f6](https://github.com/underscopeio/bitrise-step-nitro/commit/c5d24f638332aa33b0636e0964837cbddf088359))
+
 # [0.4.0-beta.1](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0...0.4.0-beta.1) (2022-07-04)
 
 
