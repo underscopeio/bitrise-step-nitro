@@ -1,3 +1,10 @@
+# [0.4.0-beta.4](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.3...0.4.0-beta.4) (2022-07-06)
+
+
+### Features
+
+* expose NITRO_BUILD_STATUS env ([391a79c](https://github.com/underscopeio/bitrise-step-nitro/commit/391a79cda8c085200c8f90ad02d0d3fff690f964))
+
 # [0.4.0-beta.3](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.2...0.4.0-beta.3) (2022-07-06)
 
 
