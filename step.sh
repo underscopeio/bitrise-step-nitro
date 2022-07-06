@@ -75,6 +75,10 @@ if [[ -n ${custom_ssh_key_url} ]]; then
   args+=("--custom-ssh-key-url" "$custom_ssh_key_url")
 fi
 
+if [[ -n ${output_directory} ]]; then
+  args+=("--output-directory" "$output_directory")
+fi
+
 if [[ -n ${root_directory} ]]; then
   args+=("--root-directory" "$root_directory")
 fi
