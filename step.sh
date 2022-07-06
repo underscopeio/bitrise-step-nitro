@@ -212,4 +212,8 @@ exit_code=$?
 if [[ exit_code -ne 0 ]]; then
   echo "⚠️ Nitro has thrown a '${exit_code}' error code while running on fail-safe mode. You can check 'NITRO_BUILD_FAILED' value in further steps."
   envman add --key "NITRO_BUILD_FAILED" --value "true"
+  envman add --key "NITRO_BUILD_STATUS" --value "failed"
+else  
+  envman add --key "NITRO_BUILD_FAILED" --value "false"
+  envman add --key "NITRO_BUILD_STATUS" --value "success"
 fi
