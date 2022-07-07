@@ -25,12 +25,12 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 
 | Key | Description | Flags | Default |
 | --- | --- | --- | --- |
-| `platform` | The target platform you want to build. | required | `ios` |
-| `debug` | Enable verbose logs | required | `no` |
+| `platform` | The target platform you want to build. | required |  |
 | `project_id` | A string to indetify the project | required | `$BITRISE_APP_URL` |
 | `build_id` | A string to indetify the build number | required | `$BITRISE_BUILD_SLUG` |
 | `output_directory` | The path to the directory where to place all of Nitro's output files |  | `$BITRISE_DEPLOY_DIR` |
 | `root_directory` | The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory. |  | `$NITRO_ROOT_DIRECTORY` |
+| `debug` | Enable verbose logs |  | `no` |
 | `fail_safe` | Runing the app in this mode allows you to prevent the build to fail but you can check the status in further steps. |  |  |
 | `version_name` | The version name for the app |  |  |
 | `version_code` | The version code for the app |  |  |

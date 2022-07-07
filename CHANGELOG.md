@@ -1,3 +1,10 @@
+# [0.4.0-beta.5](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.4...0.4.0-beta.5) (2022-07-07)
+
+
+### Bug Fixes
+
+* make platform required ([2a2f182](https://github.com/underscopeio/bitrise-step-nitro/commit/2a2f182232839df8a13ed596bb973d8b9fa6aaa1))
+
 # [0.4.0-beta.4](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.3...0.4.0-beta.4) (2022-07-06)
 
 
