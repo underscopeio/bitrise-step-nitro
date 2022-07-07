@@ -37,7 +37,7 @@ toolkit:
 
 inputs:
   # Required
-  - platform: "ios"
+  - platform:
     opts:
       title: "Build platform"
       summary: "The target platform you want to build."
@@ -47,15 +47,6 @@ inputs:
       value_options:
         - ios
         - android
-  - debug: "no"
-    opts:
-      title: Debug
-      summary: Enable verbose logs
-      description: "Enable verbose logs"
-      value_options:
-        - "yes"
-        - "no"
-      is_required: true
   - project_id: "$BITRISE_APP_URL"
     opts:
       title: "Project identifier"
@@ -79,6 +70,14 @@ inputs:
       summary: "The directory within your project, in which your code is located. Leave this field empty if your code is not located in a subdirectory."
       is_expand: true
   # Not Required
+  - debug: "no"
+    opts:
+      title: Debug
+      summary: Enable verbose logs
+      description: "Enable verbose logs"
+      value_options:
+        - "yes"
+        - "no"
   - fail_safe:
     opts:
       title: "Fail-safe mode"
