@@ -123,6 +123,18 @@ if [[ "${experimental_metro_cache_enabled}" == "true" || "${experimental_metro_c
   args+=("--experimental-metro-cache-enabled")
 fi
 
+if [[ -n ${pre_install_command} ]]; then
+  args+=("--pre-install-command" "$pre_install_command")
+fi
+
+if [[ -n ${pre_build_command} ]]; then
+  args+=("--pre-build-command" "$pre_build_command")
+fi
+
+if [[ -n ${post_build_command} ]]; then
+  args+=("--post-build-command" "$post_build_command")
+fi
+
 # IOS args
 if [[ "${platform}" == "ios" ]]; then
   if [[ -n ${ios_scheme} ]]; then

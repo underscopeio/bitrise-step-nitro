@@ -162,6 +162,24 @@ inputs:
       summary: "When enabling this the build will try to take advantage of the React Native Metro cache."
       description: "When enabling this the build will try to take advantage of the React Native Metro cache."
       is_expand: true
+  - pre_install_command:
+    opts:
+      title: "Pre install command"
+      summary: "Run command prior to install project dependencies (e.g. `rm -rf ./some-folder`)"
+      description: "Run command prior to install project dependencies (e.g. `rm -rf ./some-folder`)"
+      is_expand: true
+  - pre_build_command:
+    opts:
+      title: "Pre build command"
+      summary: "Run command prior to start building the app (e.g. `yarn tsc && yarn test`)"
+      description: "Run command prior to start building the app (e.g. `yarn tsc && yarn test`)"
+      is_expand: true
+  - post_build_command:
+    opts:
+      title: "Post build command"
+      summary: "Run command once build successfully finished (e.g. `yarn publish`)"
+      description: "Run command once build successfully finished (e.g. `yarn publish`)"
+      is_expand: true
 
   # Android Category
   - android_flavor:
