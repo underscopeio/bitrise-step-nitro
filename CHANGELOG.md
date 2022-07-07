@@ -1,3 +1,10 @@
+# [0.4.0-beta.6](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.5...0.4.0-beta.6) (2022-07-07)
+
+
+### Features
+
+* add new cli arguments ([a26547f](https://github.com/underscopeio/bitrise-step-nitro/commit/a26547f9a74aabefbca9379188680ffc23a99ce8))
+
 # [0.4.0-beta.5](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.4...0.4.0-beta.5) (2022-07-07)
 
 

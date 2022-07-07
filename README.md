@@ -44,6 +44,9 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 | `cache_env_var_lookup_keys` | A list of env variable keys to lookup in order to determine whether the build should be cached or not. |  |  |
 | `cache_file_lookup_paths` | A list of paths (relative to the root of the repo or absolute) to lookup in order to determine whether the build should be cached or not. |  |  |
 | `experimental_metro_cache_enabled` | When enabling this the build will try to take advantage of the React Native Metro cache. |  |  |
+| `pre_install_command` | Run command prior to install project dependencies (e.g. `rm -rf ./some-folder`) |  |  |
+| `pre_build_command` | Run command prior to start building the app (e.g. `yarn tsc && yarn test`) |  |  |
+| `post_build_command` | Run command once build successfully finished (e.g. `yarn publish`) |  |  |
 | `android_flavor` | Flavor |  |  |
 | `android_keystore_url` | Keystore url |  | `$BITRISEIO_ANDROID_KEYSTORE_URL` |
 | `android_keystore_password` | Keystore password | sensitive | `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD` |
