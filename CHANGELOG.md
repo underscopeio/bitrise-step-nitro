@@ -1,3 +1,20 @@
+# [0.4.0](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0...0.4.0) (2022-07-08)
+
+
+### Bug Fixes
+
+* make platform required ([2a2f182](https://github.com/underscopeio/bitrise-step-nitro/commit/2a2f182232839df8a13ed596bb973d8b9fa6aaa1))
+* point to the latest Nitro version ([3afa540](https://github.com/underscopeio/bitrise-step-nitro/commit/3afa54061c09d627de2de81098eacc7c8144bdb5))
+
+
+### Features
+
+* add new cli arguments ([a26547f](https://github.com/underscopeio/bitrise-step-nitro/commit/a26547f9a74aabefbca9379188680ffc23a99ce8))
+* expose NITRO_BUILD_STATUS env ([391a79c](https://github.com/underscopeio/bitrise-step-nitro/commit/391a79cda8c085200c8f90ad02d0d3fff690f964))
+* implement fail-safe flag ([d721199](https://github.com/underscopeio/bitrise-step-nitro/commit/d721199577c05ca18763591313e83d9b37848cb3))
+* implement output-directory option ([c9f5009](https://github.com/underscopeio/bitrise-step-nitro/commit/c9f5009d848203ae33826c1228a22f7e365e7fec))
+* point to the latest nitro version ([c5d24f6](https://github.com/underscopeio/bitrise-step-nitro/commit/c5d24f638332aa33b0636e0964837cbddf088359))
+
 # [0.4.0-beta.6](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0-beta.5...0.4.0-beta.6) (2022-07-07)
 
 
