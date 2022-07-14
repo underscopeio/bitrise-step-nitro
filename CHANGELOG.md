@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/underscopeio/bitrise-step-nitro/compare/0.4.0...0.4.1) (2022-07-14)
+
+
+### Bug Fixes
+
+* update nitro version to 0.3.1 ([243d87c](https://github.com/underscopeio/bitrise-step-nitro/commit/243d87c709aa73cd257b60fa46b173fec19a5aa5))
+
 # [0.4.0](https://github.com/underscopeio/bitrise-step-nitro/compare/0.3.0...0.4.0) (2022-07-08)
 
 
